@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <attr name="actionMenuDrawableAtTop" format="boolean" />
+    <attr name="actionBarHomeMarginRight" format="dimension" />
+    <attr name="dialogTitleBackground" format="reference" />
+    <attr name="searchViewSearchIcon" format="reference" />
+    <attr name="searchViewEditQuery" format="reference" />
+    <attr name="searchViewGoIcon" format="reference" />
+    <item type="attr" name="android_homeAsUpIndicator">@android:attr/homeAsUpIndicator</item>
+    <item type="attr" name="android_searchResultListItemHeight">@android:attr/searchResultListItemHeight</item>
+    <attr name="spinnerHeight" format="dimension" />
+    <attr name="volumePanelDrawable" format="reference" />
+    <attr name="resolveItemBackground" format="reference" />
+    <attr name="actionModePopupWindowStyle" format="reference" />
+    <attr name="dialogTitleDecorLayout" format="reference" />
+    <attr name="gestureOverlayViewStyle" format="reference" />
+    <attr name="preferenceFrameLayoutStyle" format="reference" />
+    <attr name="quickContactBadgeOverlay" format="reference" />
+    <attr name="searchDialogTheme" format="reference" />
+    <attr name="stackViewStyle" format="reference" />
+    <attr name="switchStyle" format="reference" />
+    <attr name="timePickerStyle" format="reference" />
+    <attr name="actionModeFindDrawable" format="reference" />
+    <attr name="actionModeShareDrawable" format="reference" />
+    <attr name="actionModeWebSearchDrawable" format="reference" />
+    <attr name="dialogCustomTitleDecorLayout" format="reference" />
+    <attr name="dialogTitleIconsDecorLayout" format="reference" />
+    <attr name="numberPickerStyle" format="reference" />
+    <attr name="panelMenuIsCompact" format="boolean" />
+    <attr name="panelMenuListWidth" format="dimension" />
+    <attr name="panelMenuListTheme" format="reference" />
+    <attr name="preferenceFragmentStyle" format="reference" />
+    <attr name="searchViewCloseIcon" format="reference" />
+    <attr name="searchViewTextField" format="reference" />
+    <attr name="searchViewTextFieldRight" format="reference" />
+    <attr name="toastFrameBackground" format="reference" />
+    <attr name="tabLayout" format="reference" />
+    <attr name="keyboardViewStyle" format="reference" />
+    <attr name="borderLeft" format="dimension" />
+    <attr name="borderRight" format="dimension" />
+    <attr name="selectionDivider" format="reference" />
+    <attr name="windowMinWidthMajor" format="dimension|fraction" />
+    <attr name="windowMinWidthMinor" format="dimension|fraction" />
+    <attr name="windowFixedWidthMajor" format="dimension|fraction" />
+    <attr name="windowFixedHeightMinor" format="dimension|fraction" />
+    <attr name="windowFixedWidthMinor" format="dimension|fraction" />
+    <attr name="windowFixedHeightMajor" format="dimension|fraction" />
+    <attr name="searchViewVoiceIcon" format="reference" />
+</resources>

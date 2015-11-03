@@ -1,0 +1,13 @@
+recovery_api_version=3
+fstab_version=1
+use_set_metadata=1
+multistage_support=1
+update_rename_support=1
+fs_type=ext4
+blocksize=4096
+boot_size=111534336
+recovery_size=111534336
+system_size=2254438400
+userdata_size=12738101428
+cache_size=108174080
+selinux_fc=BOOT/RAMDISK/file_contexts

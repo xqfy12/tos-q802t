@@ -1,0 +1,24 @@
+#!/system/bin/sh
+
+default=$(getprop persist.sys.ztelog.enable); 
+sdcard0=$(getprop persist.sys.ztelog.sd0); 
+sdcard1=$(getprop persist.sys.ztelog.sd1); 
+secureprop=$(getprop ro.secure); 
+echo $default;
+echo $sdcard0;
+echo $sdcard1;
+echo $secureprop;
+
+if busybox [ -n "$default" ];then	
+	echo "no need default";
+elif busybox [ -n "$sdcard0" ];then
+	echo "no need sdcard0";
+elif busybox [ -n "$sdcard1" ];then
+	echo "no need sdcard1";
+else
+	if busybox [ "$secureprop" -eq "0" ];then	
+		setprop persist.sys.ztelog.enable 1
+	else
+		echo "user"
+	fi
+fi

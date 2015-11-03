@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <integer name="config_switch_width_factor">4</integer>
+    <integer name="config_switch_height_extend">0</integer>
+    <integer name="config_lowBatteryWarningLevel_ten">10</integer>
+    <integer name="config_lowBatteryWarningLevel_five">5</integer>
+    <integer name="config_lowBatteryWarningLevel_two">2</integer>
+    <integer name="config_maxResolverActivityColumns">3</integer>
+</resources>

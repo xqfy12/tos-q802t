@@ -1,0 +1,7 @@
+#######################
+# sample
+#default.prop
+bin/bootanimation
+bin/mediaserver_injector
+lib/libmedia_jni.so
+#######################

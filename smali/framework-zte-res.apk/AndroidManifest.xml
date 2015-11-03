@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android" android:sharedUserId="android.uid.system" android:sharedUserLabel="@null" coreApp="true" package="androidzte">
+    <application android:allowClearUserData="false" android:hasCode="false" android:icon="@android:drawable/ic_launcher_android" android:killAfterRestore="false" android:label="@string/system_res_label" android:persistent="true" android:process="system">
+        <receiver android:name="com.android.server.mifavor.MifavorReceiver">
+            <intent-filter android:priority="100">
+                <action android:name="android.intent.action.CAMERA_OPENING_BY_FLASHLIGHT"/>
+            </intent-filter>
+        </receiver>
+    </application>
+</manifest>

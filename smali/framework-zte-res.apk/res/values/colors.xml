@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="bright_foreground_zte_light">#ff333333</color>
+    <color name="bright_foreground_disabled_zte_light">#ff999999</color>
+    <color name="bright_foreground_disabled_zte_dark">#66ffffff</color>
+    <color name="dim_foreground_disabled_zte_light">#ffcccccc</color>
+    <color name="dim_foreground_zte_light">#ff999999</color>
+    <color name="zte_green_light">#33328bde</color>
+    <color name="notification_title_text_color_mifavor">#ff2e2e2e</color>
+    <color name="notification_title_text_line2_mifavor">#ff969696</color>
+    <color name="md__defaultBackground">#ffffffff</color>
+    <color name="md__transparent">#00000000</color>
+    <color name="action_bar_home_pressed">#18000000</color>
+    <color name="list_view_background_zte_light">#fffafafa</color>
+</resources>
