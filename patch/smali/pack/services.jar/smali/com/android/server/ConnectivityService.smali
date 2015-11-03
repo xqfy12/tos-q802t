@@ -16753,7 +16753,7 @@
     .catchall {:try_start_4 .. :try_end_4} :catchall_0
 .end method
 
-.method public setMobileDataEnabled(Ljava/lang/String;Z)V
+.method public tos_org_setMobileDataEnabled(Ljava/lang/String;Z)V
     .locals 7
     .param p1, "callingPackage"    # Ljava/lang/String;
     .param p2, "enabled"    # Z
@@ -16847,6 +16847,69 @@
     move v2, v3
 
     goto :goto_1
+.end method
+
+.method public setMobileDataEnabled(Ljava/lang/String;Z)V
+    .locals 4
+    .parameter "callingPackage"
+    .parameter "enabled"
+    .annotation build Landroid/annotation/TOSHook;
+        hooktype = .enum Landroid/annotation/TOSHook$TOSHookType;->CHANGE_METHOD:Landroid/annotation/TOSHook$TOSHookType;
+        note = "SetupFlashRom: permission part::tamrylei::2015-05-26"
+        romtype = .enum Landroid/annotation/TOSHook$TOSRomType;->ROM:Landroid/annotation/TOSHook$TOSRomType;
+    .end annotation
+
+    .prologue
+    const/4 v1, 0x1
+
+    .line 1894xia
+    new-instance v0, Lcom/android/internal/os/TosPlugMethod$MethodPlugParam;
+
+    invoke-direct {v0}, Lcom/android/internal/os/TosPlugMethod$MethodPlugParam;-><init>()V
+
+    .line 1895
+    .local v0, param:Lcom/android/internal/os/TosPlugMethod$MethodPlugParam;
+    iput v1, v0, Lcom/android/internal/os/TosPlugMethod$MethodPlugParam;->invokeType:I
+
+    .line 1896
+    iput-object p0, v0, Lcom/android/internal/os/TosPlugMethod$MethodPlugParam;->thisObject:Ljava/lang/Object;
+
+    .line 1897
+    new-array v1, v1, [Ljava/lang/Object;
+
+    iput-object v1, v0, Lcom/android/internal/os/TosPlugMethod$MethodPlugParam;->args:[Ljava/lang/Object;
+
+    .line 1898
+    iget-object v1, v0, Lcom/android/internal/os/TosPlugMethod$MethodPlugParam;->args:[Ljava/lang/Object;
+
+    const/4 v2, 0x0
+
+    invoke-static {p2}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
+
+    move-result-object v3
+
+    aput-object v3, v1, v2
+
+    .line 1899
+    const-string v1, "com.android.server.ConnectivityService#setMobileDataEnabled"
+
+    invoke-static {v1, v0}, Lcom/android/internal/os/TosModulesLoader;->invoke(Ljava/lang/String;Lcom/android/internal/os/TosPlugMethod$MethodPlugParam;)V
+
+    .line 1900
+    invoke-virtual {v0}, Lcom/android/internal/os/TosPlugMethod$MethodPlugParam;->returnEarly()Z
+
+    move-result v1
+
+    if-eqz v1, :cond_0
+
+    .line 1904
+    :goto_0
+    return-void
+
+    .line 1903
+    :cond_0
+    invoke-virtual {p0, p1,p2}, Lcom/android/server/ConnectivityService;->tos_org_setMobileDataEnabled(Ljava/lang/String;Z)V
+    goto :goto_0
 .end method
 
 .method public setNetworkPreference(I)V
