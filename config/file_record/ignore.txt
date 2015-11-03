@@ -1,3 +1,10 @@
 progress
 ota
 smali
+patch/smali/pack/android.policy.jar
+patch/smali/pack/ext.jar
+patch/smali/pack/framework2.jar
+patch/smali/pack/framework.jar
+patch/smali/pack/framework-zte-res.apk
+patch/smali/pack/services.jar
+patch/smali/pack/telephony-common.jar

@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="action_bar_spinner_height">-1.0dip</dimen>
+    <dimen name="action_bar_menu_drawablePadding">6.0dip</dimen>
+    <dimen name="action_bar_stacked_max_height_zte">52.0dip</dimen>
+    <dimen name="preference_fragment_padding_side_zte">0.0dip</dimen>
+    <dimen name="action_bar_default_height_zte">52.0dip</dimen>
+    <dimen name="action_bar_home_up_margin_right_default">-8.0dip</dimen>
+    <dimen name="action_bar_home_up_margin_right_zte">-4.0dip</dimen>
+    <dimen name="alert_dialog_title_height_zte_light">48.0dip</dimen>
+    <dimen name="action_bar_menu_textsize">18.0dip</dimen>
+    <dimen name="dropdownitem_text_padding_left">8.0dip</dimen>
+    <dimen name="dropdownitem_text_padding_right">8.0dip</dimen>
+    <dimen name="dropdownitem_icon_width">32.0dip</dimen>
+    <dimen name="search_view_text_min_width">160.0dip</dimen>
+    <dimen name="fastscroll_overlay_size">72.0dip</dimen>
+    <dimen name="fastscroll_overlay_padding">4.0dip</dimen>
+    <dimen name="action_button_min_width">40.0dip</dimen>
+</resources>

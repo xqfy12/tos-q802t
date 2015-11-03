@@ -1,0 +1,17 @@
+version: 2.0.0
+apkFileName: framework-zte-res.apk
+isFrameworkApk: true
+usesFramework:
+  ids:
+  - 1
+  tag: TPS_q802t
+sdkInfo:
+  minSdkVersion: '19'
+  targetSdkVersion: '19'
+packageInfo:
+  forced-package-id: '2'
+versionInfo:
+  versionCode: '19'
+  versionName: 4.4.4-eng.liandongzhou.20150513.194632
+compressionType: false
+sharedLibrary: false

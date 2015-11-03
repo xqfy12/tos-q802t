@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <integer-array name="config_autoBrightnessLevels">
+        <item>10</item>
+        <item>45</item>
+        <item>60</item>
+        <item>150</item>
+        <item>500</item>
+        <item>1000</item>
+        <item>2000</item>
+        <item>3000</item>
+        <item>7000</item>
+    </integer-array>
+    <integer-array name="config_autoBrightnessLcdBacklightValues">
+        <item>20</item>
+        <item>35</item>
+        <item>60</item>
+        <item>75</item>
+        <item>115</item>
+        <item>160</item>
+        <item>180</item>
+        <item>200</item>
+        <item>240</item>
+        <item>255</item>
+    </integer-array>
+    <integer-array name="config_autoBrightnessButtonBacklightValues">
+        <item>250</item>
+        <item>250</item>
+        <item>250</item>
+        <item>0</item>
+        <item>0</item>
+        <item>0</item>
+        <item>0</item>
+        <item>0</item>
+        <item>0</item>
+        <item>0</item>
+    </integer-array>
+    <integer-array name="config_autoBrightnessKeyboardBacklightValues">
+        <item>250</item>
+        <item>0</item>
+        <item>0</item>
+        <item>0</item>
+        <item>0</item>
+        <item>0</item>
+        <item>0</item>
+        <item>0</item>
+        <item>0</item>
+        <item>0</item>
+    </integer-array>
+    <string-array name="zte_config_ntpServers">
+        <item>2.android.pool.ntp.org</item>
+        <item>time.zte.com.cn</item>
+        <item>time.izatcloud.net</item>
+        <item>cn.pool.ntp.org</item>
+        <item>pool.ntp.org</item>
+    </string-array>
+    <integer-array name="config_P892S10_autoBrightnessLevels">
+        <item>10</item>
+        <item>250</item>
+        <item>700</item>
+        <item>1000</item>
+        <item>1500</item>
+        <item>2500</item>
+        <item>3500</item>
+        <item>4500</item>
+        <item>7000</item>
+    </integer-array>
+    <integer-array name="config_P892S10_autoBrightnessLcdBacklightValues">
+        <item>20</item>
+        <item>80</item>
+        <item>130</item>
+        <item>160</item>
+        <item>175</item>
+        <item>195</item>
+        <item>220</item>
+        <item>240</item>
+        <item>250</item>
+        <item>255</item>
+    </integer-array>
+    <string-array name="config_locationProviderPackageNames">
+        <item>com.android.location.fused</item>
+        <item>com.baidu.map.location</item>
+    </string-array>
+</resources>
