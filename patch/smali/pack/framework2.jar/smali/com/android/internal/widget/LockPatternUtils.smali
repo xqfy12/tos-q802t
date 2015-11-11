@@ -93,7 +93,7 @@
 
 # direct methods
 .method static constructor <clinit>()V
-    .locals 1
+    .registers 1
 
     .prologue
     .line 185
@@ -105,7 +105,7 @@
 .end method
 
 .method public constructor <init>(Landroid/content/Context;)V
-    .locals 1
+    .registers 3
     .param p1, "context"    # Landroid/content/Context;
 
     .prologue
@@ -147,25 +147,25 @@
 
     move-result v0
 
-    if-nez v0, :cond_0
+    if-nez v0, :cond_28
 
     const/4 v0, 0x1
 
-    :goto_0
+    :goto_25
     iput-boolean v0, p0, Lcom/android/internal/widget/LockPatternUtils;->mMultiUserMode:Z
 
     .line 212
     return-void
 
     .line 210
-    :cond_0
+    :cond_28
     const/4 v0, 0x0
 
-    goto :goto_0
+    goto :goto_25
 .end method
 
 .method static synthetic access$000(Lcom/android/internal/widget/LockPatternUtils;)I
-    .locals 1
+    .registers 2
     .param p0, "x0"    # Lcom/android/internal/widget/LockPatternUtils;
 
     .prologue
@@ -178,7 +178,7 @@
 .end method
 
 .method static synthetic access$100(Lcom/android/internal/widget/LockPatternUtils;)Lcom/android/internal/widget/ILockSettings;
-    .locals 1
+    .registers 2
     .param p0, "x0"    # Lcom/android/internal/widget/LockPatternUtils;
 
     .prologue
@@ -191,7 +191,7 @@
 .end method
 
 .method static synthetic access$1000(Lcom/android/internal/widget/LockPatternUtils;Ljava/lang/String;J)J
-    .locals 2
+    .registers 6
     .param p0, "x0"    # Lcom/android/internal/widget/LockPatternUtils;
     .param p1, "x1"    # Ljava/lang/String;
     .param p2, "x2"    # J
@@ -206,7 +206,7 @@
 .end method
 
 .method static synthetic access$1100(Lcom/android/internal/widget/LockPatternUtils;)Landroid/content/Context;
-    .locals 1
+    .registers 2
     .param p0, "x0"    # Lcom/android/internal/widget/LockPatternUtils;
 
     .prologue
@@ -217,7 +217,7 @@
 .end method
 
 .method static synthetic access$200(Lcom/android/internal/widget/LockPatternUtils;Ljava/lang/String;Z)V
-    .locals 0
+    .registers 3
     .param p0, "x0"    # Lcom/android/internal/widget/LockPatternUtils;
     .param p1, "x1"    # Ljava/lang/String;
     .param p2, "x2"    # Z
@@ -230,7 +230,7 @@
 .end method
 
 .method static synthetic access$300(Lcom/android/internal/widget/LockPatternUtils;Ljava/lang/String;J)V
-    .locals 0
+    .registers 4
     .param p0, "x0"    # Lcom/android/internal/widget/LockPatternUtils;
     .param p1, "x1"    # Ljava/lang/String;
     .param p2, "x2"    # J
@@ -243,7 +243,7 @@
 .end method
 
 .method static synthetic access$400(Lcom/android/internal/widget/LockPatternUtils;)Landroid/content/ContentResolver;
-    .locals 1
+    .registers 2
     .param p0, "x0"    # Lcom/android/internal/widget/LockPatternUtils;
 
     .prologue
@@ -254,7 +254,7 @@
 .end method
 
 .method static synthetic access$500(Lcom/android/internal/widget/LockPatternUtils;)V
-    .locals 0
+    .registers 1
     .param p0, "x0"    # Lcom/android/internal/widget/LockPatternUtils;
 
     .prologue
@@ -265,7 +265,7 @@
 .end method
 
 .method static synthetic access$600(Lcom/android/internal/widget/LockPatternUtils;Ljava/lang/String;)V
-    .locals 0
+    .registers 2
     .param p0, "x0"    # Lcom/android/internal/widget/LockPatternUtils;
     .param p1, "x1"    # Ljava/lang/String;
 
@@ -277,7 +277,7 @@
 .end method
 
 .method static synthetic access$700(Lcom/android/internal/widget/LockPatternUtils;Ljava/lang/String;JI)V
-    .locals 0
+    .registers 5
     .param p0, "x0"    # Lcom/android/internal/widget/LockPatternUtils;
     .param p1, "x1"    # Ljava/lang/String;
     .param p2, "x2"    # J
@@ -291,7 +291,7 @@
 .end method
 
 .method static synthetic access$800(Lcom/android/internal/widget/LockPatternUtils;Ljava/lang/String;I)Ljava/lang/String;
-    .locals 1
+    .registers 4
     .param p0, "x0"    # Lcom/android/internal/widget/LockPatternUtils;
     .param p1, "x1"    # Ljava/lang/String;
     .param p2, "x2"    # I
@@ -306,7 +306,7 @@
 .end method
 
 .method static synthetic access$900(Lcom/android/internal/widget/LockPatternUtils;Ljava/lang/String;Ljava/lang/String;I)V
-    .locals 0
+    .registers 4
     .param p0, "x0"    # Lcom/android/internal/widget/LockPatternUtils;
     .param p1, "x1"    # Ljava/lang/String;
     .param p2, "x2"    # Ljava/lang/String;
@@ -320,7 +320,7 @@
 .end method
 
 .method private static combineStrings([ILjava/lang/String;)Ljava/lang/String;
-    .locals 7
+    .registers 9
     .param p0, "list"    # [I
     .param p1, "separator"    # Ljava/lang/String;
 
@@ -330,7 +330,7 @@
 
     .line 1179
     .local v1, "listLength":I
-    packed-switch v1, :pswitch_data_0
+    packed-switch v1, :pswitch_data_4e
 
     .line 1188
     const/4 v4, 0x0
@@ -352,8 +352,8 @@
     const/4 v0, 0x0
 
     .local v0, "i":I
-    :goto_0
-    if-ge v0, v1, :cond_1
+    :goto_d
+    if-ge v0, v1, :cond_31
 
     .line 1193
     aget v6, p0, v0
@@ -376,31 +376,31 @@
     .line 1195
     add-int/lit8 v6, v1, -0x1
 
-    if-ge v0, v6, :cond_0
+    if-ge v0, v6, :cond_23
 
     .line 1196
     add-int/2addr v4, v3
 
     .line 1192
-    :cond_0
+    :cond_23
     add-int/lit8 v0, v0, 0x1
 
-    goto :goto_0
+    goto :goto_d
 
     .line 1181
     .end local v0    # "i":I
     .end local v3    # "separatorLength":I
     .end local v4    # "strLength":I
     .end local v5    # "stringList":[Ljava/lang/String;
-    :pswitch_0
+    :pswitch_26
     const-string v6, ""
 
     .line 1209
-    :goto_1
+    :goto_28
     return-object v6
 
     .line 1184
-    :pswitch_1
+    :pswitch_29
     const/4 v6, 0x0
 
     aget v6, p0, v6
@@ -409,14 +409,14 @@
 
     move-result-object v6
 
-    goto :goto_1
+    goto :goto_28
 
     .line 1200
     .restart local v0    # "i":I
     .restart local v3    # "separatorLength":I
     .restart local v4    # "strLength":I
     .restart local v5    # "stringList":[Ljava/lang/String;
-    :cond_1
+    :cond_31
     new-instance v2, Ljava/lang/StringBuilder;
 
     invoke-direct {v2, v4}, Ljava/lang/StringBuilder;-><init>(I)V
@@ -425,8 +425,8 @@
     .local v2, "sb":Ljava/lang/StringBuilder;
     const/4 v0, 0x0
 
-    :goto_2
-    if-ge v0, v1, :cond_3
+    :goto_37
+    if-ge v0, v1, :cond_48
 
     .line 1203
     aget v6, p0, v0
@@ -436,37 +436,37 @@
     .line 1204
     add-int/lit8 v6, v1, -0x1
 
-    if-ge v0, v6, :cond_2
+    if-ge v0, v6, :cond_45
 
     .line 1205
     invoke-virtual {v2, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     .line 1202
-    :cond_2
+    :cond_45
     add-int/lit8 v0, v0, 0x1
 
-    goto :goto_2
+    goto :goto_37
 
     .line 1209
-    :cond_3
+    :cond_48
     invoke-virtual {v2}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
     move-result-object v6
 
-    goto :goto_1
+    goto :goto_28
 
     .line 1179
     nop
 
-    :pswitch_data_0
+    :pswitch_data_4e
     .packed-switch 0x0
-        :pswitch_0
-        :pswitch_1
+        :pswitch_26
+        :pswitch_29
     .end packed-switch
 .end method
 
 .method public static computePasswordQuality(Ljava/lang/String;)I
-    .locals 5
+    .registers 6
     .param p0, "password"    # Ljava/lang/String;
 
     .prologue
@@ -488,8 +488,8 @@
     const/4 v2, 0x0
 
     .local v2, "i":I
-    :goto_0
-    if-ge v2, v3, :cond_1
+    :goto_7
+    if-ge v2, v3, :cond_19
 
     .line 579
     invoke-virtual {p0, v2}, Ljava/lang/String;->charAt(I)C
@@ -500,63 +500,63 @@
 
     move-result v4
 
-    if-eqz v4, :cond_0
+    if-eqz v4, :cond_17
 
     .line 580
     const/4 v0, 0x1
 
     .line 578
-    :goto_1
+    :goto_14
     add-int/lit8 v2, v2, 0x1
 
-    goto :goto_0
+    goto :goto_7
 
     .line 582
-    :cond_0
+    :cond_17
     const/4 v1, 0x1
 
-    goto :goto_1
+    goto :goto_14
 
     .line 586
-    :cond_1
-    if-eqz v1, :cond_2
+    :cond_19
+    if-eqz v1, :cond_20
 
-    if-eqz v0, :cond_2
+    if-eqz v0, :cond_20
 
     .line 587
     const/high16 v4, 0x50000
 
     .line 595
-    :goto_2
+    :goto_1f
     return v4
 
     .line 589
-    :cond_2
-    if-eqz v1, :cond_3
+    :cond_20
+    if-eqz v1, :cond_25
 
     .line 590
     const/high16 v4, 0x40000
 
-    goto :goto_2
+    goto :goto_1f
 
     .line 592
-    :cond_3
-    if-eqz v0, :cond_4
+    :cond_25
+    if-eqz v0, :cond_2a
 
     .line 593
     const/high16 v4, 0x20000
 
-    goto :goto_2
+    goto :goto_1f
 
     .line 595
-    :cond_4
+    :cond_2a
     const/4 v4, 0x0
 
-    goto :goto_2
+    goto :goto_1f
 .end method
 
 .method private finishBiometricWeak()V
-    .locals 3
+    .registers 4
 
     .prologue
     .line 1416
@@ -589,7 +589,7 @@
 .end method
 
 .method private getAppWidgets(I)[I
-    .locals 10
+    .registers 12
     .param p1, "userId"    # I
 
     .prologue
@@ -608,13 +608,13 @@
 
     .line 1159
     .local v4, "delims":Ljava/lang/String;
-    if-eqz v1, :cond_1
+    if-eqz v1, :cond_47
 
     invoke-virtual {v1}, Ljava/lang/String;->length()I
 
     move-result v7
 
-    if-lez v7, :cond_1
+    if-lez v7, :cond_47
 
     .line 1160
     invoke-virtual {v1, v4}, Ljava/lang/String;->split(Ljava/lang/String;)[Ljava/lang/String;
@@ -632,17 +632,17 @@
     const/4 v6, 0x0
 
     .local v6, "i":I
-    :goto_0
+    :goto_1a
     array-length v7, v3
 
-    if-ge v6, v7, :cond_0
+    if-ge v6, v7, :cond_46
 
     .line 1163
     aget-object v0, v3, v6
 
     .line 1165
     .local v0, "appWidget":Ljava/lang/String;
-    :try_start_0
+    :try_start_1f
     invoke-static {v0}, Ljava/lang/Integer;->decode(Ljava/lang/String;)Ljava/lang/Integer;
 
     move-result-object v7
@@ -652,16 +652,16 @@
     move-result v7
 
     aput v7, v2, v6
-    :try_end_0
-    .catch Ljava/lang/NumberFormatException; {:try_start_0 .. :try_end_0} :catch_0
+    :try_end_29
+    .catch Ljava/lang/NumberFormatException; {:try_start_1f .. :try_end_29} :catch_2c
 
     .line 1162
     add-int/lit8 v6, v6, 0x1
 
-    goto :goto_0
+    goto :goto_1a
 
     .line 1166
-    :catch_0
+    :catch_2c
     move-exception v5
 
     .line 1167
@@ -697,20 +697,20 @@
     .end local v3    # "appWidgetStringIds":[Ljava/lang/String;
     .end local v5    # "e":Ljava/lang/NumberFormatException;
     .end local v6    # "i":I
-    :cond_0
-    :goto_1
+    :cond_46
+    :goto_46
     return-object v2
 
-    :cond_1
+    :cond_47
     const/4 v7, 0x0
 
     new-array v2, v7, [I
 
-    goto :goto_1
+    goto :goto_46
 .end method
 
 .method private getBoolean(Ljava/lang/String;Z)Z
-    .locals 1
+    .registers 4
     .param p1, "secureSettingKey"    # Ljava/lang/String;
     .param p2, "defaultValue"    # Z
 
@@ -728,7 +728,7 @@
 .end method
 
 .method private getBoolean(Ljava/lang/String;ZI)Z
-    .locals 2
+    .registers 6
     .param p1, "secureSettingKey"    # Ljava/lang/String;
     .param p2, "defaultValue"    # Z
     .param p3, "userId"    # I
@@ -741,34 +741,34 @@
     move-result-object v1
 
     invoke-interface {v1, p1, p2, p3}, Lcom/android/internal/widget/ILockSettings;->getBoolean(Ljava/lang/String;ZI)Z
-    :try_end_0
-    .catch Landroid/os/RemoteException; {:try_start_0 .. :try_end_0} :catch_0
+    :try_end_7
+    .catch Landroid/os/RemoteException; {:try_start_0 .. :try_end_7} :catch_9
 
     move-result p2
 
     .line 1130
     .end local p2    # "defaultValue":Z
-    :goto_0
+    :goto_8
     return p2
 
     .line 1129
     .restart local p2    # "defaultValue":Z
-    :catch_0
+    :catch_9
     move-exception v0
 
     .line 1130
     .local v0, "re":Landroid/os/RemoteException;
-    goto :goto_0
+    goto :goto_8
 .end method
 
 .method private getCurrentOrCallingUserId()I
-    .locals 1
+    .registers 2
 
     .prologue
     .line 306
     iget-boolean v0, p0, Lcom/android/internal/widget/LockPatternUtils;->mMultiUserMode:Z
 
-    if-eqz v0, :cond_0
+    if-eqz v0, :cond_9
 
     .line 309
     invoke-virtual {p0}, Lcom/android/internal/widget/LockPatternUtils;->getCurrentUser()I
@@ -776,25 +776,25 @@
     move-result v0
 
     .line 311
-    :goto_0
+    :goto_8
     return v0
 
-    :cond_0
+    :cond_9
     invoke-static {}, Landroid/os/UserHandle;->getCallingUserId()I
 
     move-result v0
 
-    goto :goto_0
+    goto :goto_8
 .end method
 
 .method private getLockSettings()Lcom/android/internal/widget/ILockSettings;
-    .locals 1
+    .registers 2
 
     .prologue
     .line 215
     iget-object v0, p0, Lcom/android/internal/widget/LockPatternUtils;->mLockSettingsService:Lcom/android/internal/widget/ILockSettings;
 
-    if-nez v0, :cond_0
+    if-nez v0, :cond_10
 
     .line 216
     const-string v0, "lock_settings"
@@ -810,14 +810,14 @@
     iput-object v0, p0, Lcom/android/internal/widget/LockPatternUtils;->mLockSettingsService:Lcom/android/internal/widget/ILockSettings;
 
     .line 219
-    :cond_0
+    :cond_10
     iget-object v0, p0, Lcom/android/internal/widget/LockPatternUtils;->mLockSettingsService:Lcom/android/internal/widget/ILockSettings;
 
     return-object v0
 .end method
 
 .method private getLong(Ljava/lang/String;J)J
-    .locals 3
+    .registers 7
     .param p1, "secureSettingKey"    # Ljava/lang/String;
     .param p2, "defaultValue"    # J
 
@@ -833,28 +833,28 @@
     move-result v2
 
     invoke-interface {v1, p1, p2, p3, v2}, Lcom/android/internal/widget/ILockSettings;->getLong(Ljava/lang/String;JI)J
-    :try_end_0
-    .catch Landroid/os/RemoteException; {:try_start_0 .. :try_end_0} :catch_0
+    :try_end_b
+    .catch Landroid/os/RemoteException; {:try_start_0 .. :try_end_b} :catch_d
 
     move-result-wide p2
 
     .line 1290
     .end local p2    # "defaultValue":J
-    :goto_0
+    :goto_c
     return-wide p2
 
     .line 1289
     .restart local p2    # "defaultValue":J
-    :catch_0
+    :catch_d
     move-exception v0
 
     .line 1290
     .local v0, "re":Landroid/os/RemoteException;
-    goto :goto_0
+    goto :goto_c
 .end method
 
 .method private getSalt()Ljava/lang/String;
-    .locals 6
+    .registers 7
 
     .prologue
     const-wide/16 v4, 0x0
@@ -870,10 +870,10 @@
     .local v1, "salt":J
     cmp-long v3, v1, v4
 
-    if-nez v3, :cond_0
+    if-nez v3, :cond_22
 
     .line 861
-    :try_start_0
+    :try_start_c
     const-string v3, "SHA1PRNG"
 
     invoke-static {v3}, Ljava/security/SecureRandom;->getInstance(Ljava/lang/String;)Ljava/security/SecureRandom;
@@ -895,11 +895,11 @@
     const-string v4, "Initialized lock password salt"
 
     invoke-static {v3, v4}, Landroid/util/Log;->v(Ljava/lang/String;Ljava/lang/String;)I
-    :try_end_0
-    .catch Ljava/security/NoSuchAlgorithmException; {:try_start_0 .. :try_end_0} :catch_0
+    :try_end_22
+    .catch Ljava/security/NoSuchAlgorithmException; {:try_start_c .. :try_end_22} :catch_27
 
     .line 869
-    :cond_0
+    :cond_22
     invoke-static {v1, v2}, Ljava/lang/Long;->toHexString(J)Ljava/lang/String;
 
     move-result-object v3
@@ -907,7 +907,7 @@
     return-object v3
 
     .line 864
-    :catch_0
+    :catch_27
     move-exception v0
 
     .line 866
@@ -922,7 +922,7 @@
 .end method
 
 .method private getString(Ljava/lang/String;)Ljava/lang/String;
-    .locals 1
+    .registers 3
     .param p1, "secureSettingKey"    # Ljava/lang/String;
 
     .prologue
@@ -939,7 +939,7 @@
 .end method
 
 .method private getString(Ljava/lang/String;I)Ljava/lang/String;
-    .locals 4
+    .registers 7
     .param p1, "secureSettingKey"    # Ljava/lang/String;
     .param p2, "userHandle"    # I
 
@@ -947,7 +947,7 @@
     const/4 v1, 0x0
 
     .line 1313
-    :try_start_0
+    :try_start_1
     invoke-direct {p0}, Lcom/android/internal/widget/LockPatternUtils;->getLockSettings()Lcom/android/internal/widget/ILockSettings;
 
     move-result-object v2
@@ -955,26 +955,26 @@
     const/4 v3, 0x0
 
     invoke-interface {v2, p1, v3, p2}, Lcom/android/internal/widget/ILockSettings;->getString(Ljava/lang/String;Ljava/lang/String;I)Ljava/lang/String;
-    :try_end_0
-    .catch Landroid/os/RemoteException; {:try_start_0 .. :try_end_0} :catch_0
+    :try_end_9
+    .catch Landroid/os/RemoteException; {:try_start_1 .. :try_end_9} :catch_b
 
     move-result-object v1
 
     .line 1315
-    :goto_0
+    :goto_a
     return-object v1
 
     .line 1314
-    :catch_0
+    :catch_b
     move-exception v0
 
     .line 1315
     .local v0, "re":Landroid/os/RemoteException;
-    goto :goto_0
+    goto :goto_a
 .end method
 
 .method public static isSafeModeEnabled()Z
-    .locals 1
+    .registers 1
 
     .prologue
     .line 1436
@@ -990,27 +990,27 @@
     move-result-object v0
 
     invoke-interface {v0}, Landroid/view/IWindowManager;->isSafeModeEnabled()Z
-    :try_end_0
-    .catch Landroid/os/RemoteException; {:try_start_0 .. :try_end_0} :catch_0
+    :try_end_d
+    .catch Landroid/os/RemoteException; {:try_start_0 .. :try_end_d} :catch_f
 
     move-result v0
 
     .line 1441
-    :goto_0
+    :goto_e
     return v0
 
     .line 1438
-    :catch_0
+    :catch_f
     move-exception v0
 
     .line 1441
     const/4 v0, 0x0
 
-    goto :goto_0
+    goto :goto_e
 .end method
 
 .method public static patternToString(Ljava/util/List;)Ljava/lang/String;
-    .locals 6
+    .registers 7
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
@@ -1025,17 +1025,17 @@
     .prologue
     .line 817
     .local p0, "pattern":Ljava/util/List;, "Ljava/util/List<Lcom/android/internal/widget/LockPatternView$Cell;>;"
-    if-nez p0, :cond_0
+    if-nez p0, :cond_5
 
     .line 818
     const-string v4, ""
 
     .line 827
-    :goto_0
+    :goto_4
     return-object v4
 
     .line 820
-    :cond_0
+    :cond_5
     invoke-interface {p0}, Ljava/util/List;->size()I
 
     move-result v2
@@ -1049,8 +1049,8 @@
     const/4 v1, 0x0
 
     .local v1, "i":I
-    :goto_1
-    if-ge v1, v2, :cond_1
+    :goto_c
+    if-ge v1, v2, :cond_25
 
     .line 824
     invoke-interface {p0, v1}, Ljava/util/List;->get(I)Ljava/lang/Object;
@@ -1080,20 +1080,20 @@
     .line 823
     add-int/lit8 v1, v1, 0x1
 
-    goto :goto_1
+    goto :goto_c
 
     .line 827
     .end local v0    # "cell":Lcom/android/internal/widget/LockPatternView$Cell;
-    :cond_1
+    :cond_25
     new-instance v4, Ljava/lang/String;
 
     invoke-direct {v4, v3}, Ljava/lang/String;-><init>([B)V
 
-    goto :goto_0
+    goto :goto_4
 .end method
 
 .method private setBoolean(Ljava/lang/String;Z)V
-    .locals 1
+    .registers 4
     .param p1, "secureSettingKey"    # Ljava/lang/String;
     .param p2, "enabled"    # Z
 
@@ -1110,7 +1110,7 @@
 .end method
 
 .method private setBoolean(Ljava/lang/String;ZI)V
-    .locals 4
+    .registers 8
     .param p1, "secureSettingKey"    # Ljava/lang/String;
     .param p2, "enabled"    # Z
     .param p3, "userId"    # I
@@ -1123,15 +1123,15 @@
     move-result-object v1
 
     invoke-interface {v1, p1, p2, p3}, Lcom/android/internal/widget/ILockSettings;->setBoolean(Ljava/lang/String;ZI)V
-    :try_end_0
-    .catch Landroid/os/RemoteException; {:try_start_0 .. :try_end_0} :catch_0
+    :try_end_7
+    .catch Landroid/os/RemoteException; {:try_start_0 .. :try_end_7} :catch_8
 
     .line 1145
-    :goto_0
+    :goto_7
     return-void
 
     .line 1141
-    :catch_0
+    :catch_8
     move-exception v0
 
     .line 1143
@@ -1162,11 +1162,11 @@
 
     invoke-static {v1, v2}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    goto :goto_0
+    goto :goto_7
 .end method
 
 .method private setLong(Ljava/lang/String;J)V
-    .locals 1
+    .registers 5
     .param p1, "secureSettingKey"    # Ljava/lang/String;
     .param p2, "value"    # J
 
@@ -1183,7 +1183,7 @@
 .end method
 
 .method private setLong(Ljava/lang/String;JI)V
-    .locals 4
+    .registers 9
     .param p1, "secureSettingKey"    # Ljava/lang/String;
     .param p2, "value"    # J
     .param p4, "userHandle"    # I
@@ -1200,15 +1200,15 @@
     move-result v2
 
     invoke-interface {v1, p1, p2, p3, v2}, Lcom/android/internal/widget/ILockSettings;->setLong(Ljava/lang/String;JI)V
-    :try_end_0
-    .catch Landroid/os/RemoteException; {:try_start_0 .. :try_end_0} :catch_0
+    :try_end_b
+    .catch Landroid/os/RemoteException; {:try_start_0 .. :try_end_b} :catch_c
 
     .line 1305
-    :goto_0
+    :goto_b
     return-void
 
     .line 1301
-    :catch_0
+    :catch_c
     move-exception v0
 
     .line 1303
@@ -1239,11 +1239,11 @@
 
     invoke-static {v1, v2}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    goto :goto_0
+    goto :goto_b
 .end method
 
 .method private setString(Ljava/lang/String;Ljava/lang/String;I)V
-    .locals 4
+    .registers 8
     .param p1, "secureSettingKey"    # Ljava/lang/String;
     .param p2, "value"    # Ljava/lang/String;
     .param p3, "userHandle"    # I
@@ -1256,15 +1256,15 @@
     move-result-object v1
 
     invoke-interface {v1, p1, p2, p3}, Lcom/android/internal/widget/ILockSettings;->setString(Ljava/lang/String;Ljava/lang/String;I)V
-    :try_end_0
-    .catch Landroid/os/RemoteException; {:try_start_0 .. :try_end_0} :catch_0
+    :try_end_7
+    .catch Landroid/os/RemoteException; {:try_start_0 .. :try_end_7} :catch_8
 
     .line 1326
-    :goto_0
+    :goto_7
     return-void
 
     .line 1322
-    :catch_0
+    :catch_8
     move-exception v0
 
     .line 1324
@@ -1295,11 +1295,11 @@
 
     invoke-static {v1, v2}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    goto :goto_0
+    goto :goto_7
 .end method
 
 .method private static toHex([B)Ljava/lang/String;
-    .locals 6
+    .registers 7
     .param p0, "ary"    # [B
 
     .prologue
@@ -1315,10 +1315,10 @@
     const/4 v1, 0x0
 
     .local v1, "i":I
-    :goto_0
+    :goto_5
     array-length v3, p0
 
-    if-ge v1, v3, :cond_0
+    if-ge v1, v3, :cond_43
 
     .line 900
     new-instance v3, Ljava/lang/StringBuilder;
@@ -1379,15 +1379,15 @@
     .line 899
     add-int/lit8 v1, v1, 0x1
 
-    goto :goto_0
+    goto :goto_5
 
     .line 903
-    :cond_0
+    :cond_43
     return-object v2
 .end method
 
 .method private updateEncryptionPassword(Ljava/lang/String;)V
-    .locals 6
+    .registers 8
     .param p1, "password"    # Ljava/lang/String;
 
     .prologue
@@ -1408,14 +1408,14 @@
 
     const/4 v5, 0x3
 
-    if-eq v4, v5, :cond_0
+    if-eq v4, v5, :cond_10
 
     .line 618
-    :goto_0
+    :goto_f
     return-void
 
     .line 606
-    :cond_0
+    :cond_10
     const-string v4, "mount"
 
     invoke-static {v4}, Landroid/os/ServiceManager;->getService(Ljava/lang/String;)Landroid/os/IBinder;
@@ -1424,7 +1424,7 @@
 
     .line 607
     .local v3, "service":Landroid/os/IBinder;
-    if-nez v3, :cond_1
+    if-nez v3, :cond_20
 
     .line 608
     const-string v4, "LockPatternUtils"
@@ -1433,25 +1433,25 @@
 
     invoke-static {v4, v5}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    goto :goto_0
+    goto :goto_f
 
     .line 612
-    :cond_1
+    :cond_20
     invoke-static {v3}, Landroid/os/storage/IMountService$Stub;->asInterface(Landroid/os/IBinder;)Landroid/os/storage/IMountService;
 
     move-result-object v2
 
     .line 614
     .local v2, "mountService":Landroid/os/storage/IMountService;
-    :try_start_0
+    :try_start_24
     invoke-interface {v2, p1}, Landroid/os/storage/IMountService;->changeEncryptionPassword(Ljava/lang/String;)I
-    :try_end_0
-    .catch Landroid/os/RemoteException; {:try_start_0 .. :try_end_0} :catch_0
+    :try_end_27
+    .catch Landroid/os/RemoteException; {:try_start_24 .. :try_end_27} :catch_28
 
-    goto :goto_0
+    goto :goto_f
 
     .line 615
-    :catch_0
+    :catch_28
     move-exception v1
 
     .line 616
@@ -1462,11 +1462,11 @@
 
     invoke-static {v4, v5, v1}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
 
-    goto :goto_0
+    goto :goto_f
 .end method
 
 .method private writeAppWidgets([I)V
-    .locals 4
+    .registers 6
     .param p1, "appWidgetIds"    # [I
 
     .prologue
@@ -1492,7 +1492,7 @@
 
 # virtual methods
 .method public addAppWidget(II)Z
-    .locals 6
+    .registers 9
     .param p1, "widgetId"    # I
     .param p2, "index"    # I
 
@@ -1506,20 +1506,20 @@
 
     .line 1241
     .local v3, "widgets":[I
-    if-nez v3, :cond_1
+    if-nez v3, :cond_8
 
     .line 1259
-    :cond_0
-    :goto_0
+    :cond_7
+    :goto_7
     return v4
 
     .line 1244
-    :cond_1
-    if-ltz p2, :cond_0
+    :cond_8
+    if-ltz p2, :cond_7
 
     array-length v5, v3
 
-    if-gt p2, v5, :cond_0
+    if-gt p2, v5, :cond_7
 
     .line 1247
     array-length v4, v3
@@ -1536,13 +1536,13 @@
     const/4 v1, 0x0
 
     .local v1, "j":I
-    :goto_1
+    :goto_14
     array-length v4, v2
 
-    if-ge v0, v4, :cond_4
+    if-ge v0, v4, :cond_29
 
     .line 1249
-    if-ne p2, v0, :cond_2
+    if-ne p2, v0, :cond_1d
 
     .line 1250
     aput p1, v2, v0
@@ -1551,10 +1551,10 @@
     add-int/lit8 v0, v0, 0x1
 
     .line 1253
-    :cond_2
+    :cond_1d
     array-length v4, v2
 
-    if-ge v0, v4, :cond_3
+    if-ge v0, v4, :cond_26
 
     .line 1254
     aget v4, v3, v1
@@ -1565,23 +1565,23 @@
     add-int/lit8 v1, v1, 0x1
 
     .line 1248
-    :cond_3
+    :cond_26
     add-int/lit8 v0, v0, 0x1
 
-    goto :goto_1
+    goto :goto_14
 
     .line 1258
-    :cond_4
+    :cond_29
     invoke-direct {p0, v2}, Lcom/android/internal/widget/LockPatternUtils;->writeAppWidgets([I)V
 
     .line 1259
     const/4 v4, 0x1
 
-    goto :goto_0
+    goto :goto_7
 .end method
 
 .method public checkPassword(Ljava/lang/String;)Z
-    .locals 3
+    .registers 5
     .param p1, "password"    # Ljava/lang/String;
 
     .prologue
@@ -1592,34 +1592,34 @@
 
     .line 339
     .local v1, "userId":I
-    :try_start_0
+    :try_start_4
     invoke-direct {p0}, Lcom/android/internal/widget/LockPatternUtils;->getLockSettings()Lcom/android/internal/widget/ILockSettings;
 
     move-result-object v2
 
     invoke-interface {v2, p1, v1}, Lcom/android/internal/widget/ILockSettings;->checkPassword(Ljava/lang/String;I)Z
-    :try_end_0
-    .catch Landroid/os/RemoteException; {:try_start_0 .. :try_end_0} :catch_0
+    :try_end_b
+    .catch Landroid/os/RemoteException; {:try_start_4 .. :try_end_b} :catch_d
 
     move-result v2
 
     .line 341
-    :goto_0
+    :goto_c
     return v2
 
     .line 340
-    :catch_0
+    :catch_d
     move-exception v0
 
     .line 341
     .local v0, "re":Landroid/os/RemoteException;
     const/4 v2, 0x1
 
-    goto :goto_0
+    goto :goto_c
 .end method
 
 .method public checkPasswordHistory(Ljava/lang/String;)Z
-    .locals 7
+    .registers 9
     .param p1, "password"    # Ljava/lang/String;
 
     .prologue
@@ -1644,15 +1644,15 @@
 
     .line 355
     .local v3, "passwordHistory":Ljava/lang/String;
-    if-nez v3, :cond_1
+    if-nez v3, :cond_13
 
     .line 369
-    :cond_0
-    :goto_0
+    :cond_12
+    :goto_12
     return v5
 
     .line 359
-    :cond_1
+    :cond_13
     invoke-virtual {v2}, Ljava/lang/String;->length()I
 
     move-result v1
@@ -1665,7 +1665,7 @@
 
     .line 361
     .local v4, "passwordHistoryLength":I
-    if-eqz v4, :cond_0
+    if-eqz v4, :cond_12
 
     .line 364
     mul-int v6, v1, v4
@@ -1680,7 +1680,7 @@
 
     move-result v6
 
-    if-le v6, v0, :cond_2
+    if-le v6, v0, :cond_2c
 
     .line 367
     invoke-virtual {v3, v5, v0}, Ljava/lang/String;->substring(II)Ljava/lang/String;
@@ -1688,16 +1688,16 @@
     move-result-object v3
 
     .line 369
-    :cond_2
+    :cond_2c
     invoke-virtual {v3, v2}, Ljava/lang/String;->contains(Ljava/lang/CharSequence;)Z
 
     move-result v5
 
-    goto :goto_0
+    goto :goto_12
 .end method
 
 .method public checkPattern(Ljava/util/List;)Z
-    .locals 4
+    .registers 6
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
@@ -1717,7 +1717,7 @@
 
     .line 324
     .local v1, "userId":I
-    :try_start_0
+    :try_start_4
     invoke-direct {p0}, Lcom/android/internal/widget/LockPatternUtils;->getLockSettings()Lcom/android/internal/widget/ILockSettings;
 
     move-result-object v2
@@ -1727,28 +1727,28 @@
     move-result-object v3
 
     invoke-interface {v2, v3, v1}, Lcom/android/internal/widget/ILockSettings;->checkPattern(Ljava/lang/String;I)Z
-    :try_end_0
-    .catch Landroid/os/RemoteException; {:try_start_0 .. :try_end_0} :catch_0
+    :try_end_f
+    .catch Landroid/os/RemoteException; {:try_start_4 .. :try_end_f} :catch_11
 
     move-result v2
 
     .line 326
-    :goto_0
+    :goto_10
     return v2
 
     .line 325
-    :catch_0
+    :catch_11
     move-exception v0
 
     .line 326
     .local v0, "re":Landroid/os/RemoteException;
     const/4 v2, 0x1
 
-    goto :goto_0
+    goto :goto_10
 .end method
 
 .method public clearLock(Z)V
-    .locals 4
+    .registers 6
     .param p1, "isFallback"    # Z
 
     .prologue
@@ -1757,12 +1757,12 @@
     const/4 v1, 0x0
 
     .line 466
-    if-nez p1, :cond_0
+    if-nez p1, :cond_8
 
     invoke-virtual {p0}, Lcom/android/internal/widget/LockPatternUtils;->deleteGallery()V
 
     .line 467
-    :cond_0
+    :cond_8
     const/high16 v0, 0x10000
 
     invoke-virtual {p0, v1, v0}, Lcom/android/internal/widget/LockPatternUtils;->saveLockPassword(Ljava/lang/String;I)V
@@ -1790,7 +1790,7 @@
 .end method
 
 .method deleteGallery()V
-    .locals 3
+    .registers 4
 
     .prologue
     .line 507
@@ -1798,7 +1798,7 @@
 
     move-result v1
 
-    if-eqz v1, :cond_0
+    if-eqz v1, :cond_1c
 
     .line 508
     new-instance v1, Landroid/content/Intent;
@@ -1826,12 +1826,12 @@
 
     .line 512
     .end local v0    # "intent":Landroid/content/Intent;
-    :cond_0
+    :cond_1c
     return-void
 .end method
 
 .method public deleteTempGallery()V
-    .locals 3
+    .registers 4
 
     .prologue
     .line 498
@@ -1863,7 +1863,7 @@
 .end method
 
 .method public getActivePasswordQuality()I
-    .locals 5
+    .registers 6
 
     .prologue
     .line 421
@@ -1883,105 +1883,105 @@
 
     .line 426
     .local v1, "quality":I
-    sparse-switch v1, :sswitch_data_0
+    sparse-switch v1, :sswitch_data_46
 
     .line 459
-    :cond_0
-    :goto_0
+    :cond_e
+    :goto_e
     return v0
 
     .line 428
-    :sswitch_0
+    :sswitch_f
     invoke-virtual {p0}, Lcom/android/internal/widget/LockPatternUtils;->isLockPatternEnabled()Z
 
     move-result v2
 
-    if-eqz v2, :cond_0
+    if-eqz v2, :cond_e
 
     .line 429
     const/high16 v0, 0x10000
 
-    goto :goto_0
+    goto :goto_e
 
     .line 433
-    :sswitch_1
+    :sswitch_18
     invoke-virtual {p0}, Lcom/android/internal/widget/LockPatternUtils;->isBiometricWeakInstalled()Z
 
     move-result v2
 
-    if-eqz v2, :cond_0
+    if-eqz v2, :cond_e
 
     .line 434
     const v0, 0x8000
 
-    goto :goto_0
+    goto :goto_e
 
     .line 438
-    :sswitch_2
+    :sswitch_22
     invoke-virtual {p0}, Lcom/android/internal/widget/LockPatternUtils;->isLockPasswordEnabled()Z
 
     move-result v2
 
-    if-eqz v2, :cond_0
+    if-eqz v2, :cond_e
 
     .line 439
     const/high16 v0, 0x20000
 
-    goto :goto_0
+    goto :goto_e
 
     .line 443
-    :sswitch_3
+    :sswitch_2b
     invoke-virtual {p0}, Lcom/android/internal/widget/LockPatternUtils;->isLockPasswordEnabled()Z
 
     move-result v2
 
-    if-eqz v2, :cond_0
+    if-eqz v2, :cond_e
 
     .line 444
     const/high16 v0, 0x40000
 
-    goto :goto_0
+    goto :goto_e
 
     .line 448
-    :sswitch_4
+    :sswitch_34
     invoke-virtual {p0}, Lcom/android/internal/widget/LockPatternUtils;->isLockPasswordEnabled()Z
 
     move-result v2
 
-    if-eqz v2, :cond_0
+    if-eqz v2, :cond_e
 
     .line 449
     const/high16 v0, 0x50000
 
-    goto :goto_0
+    goto :goto_e
 
     .line 453
-    :sswitch_5
+    :sswitch_3d
     invoke-virtual {p0}, Lcom/android/internal/widget/LockPatternUtils;->isLockPasswordEnabled()Z
 
     move-result v2
 
-    if-eqz v2, :cond_0
+    if-eqz v2, :cond_e
 
     .line 454
     const/high16 v0, 0x60000
 
-    goto :goto_0
+    goto :goto_e
 
     .line 426
-    :sswitch_data_0
+    :sswitch_data_46
     .sparse-switch
-        0x8000 -> :sswitch_1
-        0x10000 -> :sswitch_0
-        0x20000 -> :sswitch_2
-        0x40000 -> :sswitch_3
-        0x50000 -> :sswitch_4
-        0x60000 -> :sswitch_5
+        0x8000 -> :sswitch_18
+        0x10000 -> :sswitch_f
+        0x20000 -> :sswitch_22
+        0x40000 -> :sswitch_2b
+        0x50000 -> :sswitch_34
+        0x60000 -> :sswitch_3d
     .end sparse-switch
 .end method
 
 .method public getActiveProfileLockMode()I
-    .locals 4
+    .registers 5
 
     .prologue
     .line 1344
@@ -2005,17 +2005,17 @@
 
     move-result v2
 
-    if-eqz v2, :cond_0
+    if-eqz v2, :cond_16
 
     .line 1349
     const/4 v2, 0x0
 
     .line 1353
-    :goto_0
+    :goto_15
     return v2
 
     .line 1352
-    :cond_0
+    :cond_16
     iget-object v2, p0, Lcom/android/internal/widget/LockPatternUtils;->mProfileManager:Landroid/app/ProfileManager;
 
     invoke-virtual {v2}, Landroid/app/ProfileManager;->getActiveProfile()Landroid/app/Profile;
@@ -2028,11 +2028,11 @@
 
     move-result v2
 
-    goto :goto_0
+    goto :goto_15
 .end method
 
 .method public getAppWidgets()[I
-    .locals 1
+    .registers 2
 
     .prologue
     .line 1152
@@ -2046,7 +2046,7 @@
 .end method
 
 .method public getCameraEnabled()Z
-    .locals 1
+    .registers 2
 
     .prologue
     .line 1476
@@ -2062,7 +2062,7 @@
 .end method
 
 .method public getCameraEnabled(I)Z
-    .locals 2
+    .registers 4
     .param p1, "userId"    # I
 
     .prologue
@@ -2079,7 +2079,7 @@
 .end method
 
 .method public getCurrentUser()I
-    .locals 3
+    .registers 4
 
     .prologue
     .line 286
@@ -2087,18 +2087,18 @@
 
     const/16 v2, -0x2710
 
-    if-eq v1, v2, :cond_0
+    if-eq v1, v2, :cond_9
 
     .line 288
     sget v1, Lcom/android/internal/widget/LockPatternUtils;->sCurrentUserId:I
 
     .line 293
-    :goto_0
+    :goto_8
     return v1
 
     .line 291
-    :cond_0
-    :try_start_0
+    :cond_9
+    :try_start_9
     invoke-static {}, Landroid/app/ActivityManagerNative;->getDefault()Landroid/app/IActivityManager;
 
     move-result-object v1
@@ -2108,30 +2108,30 @@
     move-result-object v1
 
     iget v1, v1, Landroid/content/pm/UserInfo;->id:I
-    :try_end_0
-    .catch Landroid/os/RemoteException; {:try_start_0 .. :try_end_0} :catch_0
+    :try_end_13
+    .catch Landroid/os/RemoteException; {:try_start_9 .. :try_end_13} :catch_14
 
-    goto :goto_0
+    goto :goto_8
 
     .line 292
-    :catch_0
+    :catch_14
     move-exception v0
 
     .line 293
     .local v0, "re":Landroid/os/RemoteException;
     const/4 v1, 0x0
 
-    goto :goto_0
+    goto :goto_8
 .end method
 
 .method public getDevicePolicyManager()Landroid/app/admin/DevicePolicyManager;
-    .locals 4
+    .registers 5
 
     .prologue
     .line 188
     iget-object v0, p0, Lcom/android/internal/widget/LockPatternUtils;->mDevicePolicyManager:Landroid/app/admin/DevicePolicyManager;
 
-    if-nez v0, :cond_0
+    if-nez v0, :cond_22
 
     .line 189
     iget-object v0, p0, Lcom/android/internal/widget/LockPatternUtils;->mContext:Landroid/content/Context;
@@ -2149,7 +2149,7 @@
     .line 191
     iget-object v0, p0, Lcom/android/internal/widget/LockPatternUtils;->mDevicePolicyManager:Landroid/app/admin/DevicePolicyManager;
 
-    if-nez v0, :cond_0
+    if-nez v0, :cond_22
 
     .line 192
     const-string v0, "LockPatternUtils"
@@ -2165,14 +2165,14 @@
     invoke-static {v0, v1, v2}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
 
     .line 196
-    :cond_0
+    :cond_22
     iget-object v0, p0, Lcom/android/internal/widget/LockPatternUtils;->mDevicePolicyManager:Landroid/app/admin/DevicePolicyManager;
 
     return-object v0
 .end method
 
 .method public getFallbackAppWidgetId()I
-    .locals 4
+    .registers 5
 
     .prologue
     .line 1224
@@ -2192,7 +2192,7 @@
 .end method
 
 .method public getKeyguardStoredPasswordQuality()I
-    .locals 5
+    .registers 6
 
     .prologue
     const-wide/32 v3, 0x10000
@@ -2210,7 +2210,7 @@
     .local v0, "quality":I
     const v1, 0x8000
 
-    if-ne v0, v1, :cond_0
+    if-ne v0, v1, :cond_16
 
     .line 776
     const-string v1, "lockscreen.password_type_alternate"
@@ -2222,12 +2222,12 @@
     long-to-int v0, v1
 
     .line 780
-    :cond_0
+    :cond_16
     return v0
 .end method
 
 .method public getLockPatternSize()B
-    .locals 3
+    .registers 4
 
     .prologue
     .line 1023
@@ -2241,28 +2241,28 @@
     move-result v2
 
     invoke-interface {v1, v2}, Lcom/android/internal/widget/ILockSettings;->getLockPatternSize(I)B
-    :try_end_0
-    .catch Landroid/os/RemoteException; {:try_start_0 .. :try_end_0} :catch_0
+    :try_end_b
+    .catch Landroid/os/RemoteException; {:try_start_0 .. :try_end_b} :catch_d
 
     move-result v1
 
     .line 1025
-    :goto_0
+    :goto_c
     return v1
 
     .line 1024
-    :catch_0
+    :catch_d
     move-exception v0
 
     .line 1025
     .local v0, "re":Landroid/os/RemoteException;
     const/4 v1, 0x3
 
-    goto :goto_0
+    goto :goto_c
 .end method
 
 .method public getLockoutAttemptDeadline()J
-    .locals 8
+    .registers 9
 
     .prologue
     const-wide/16 v4, 0x0
@@ -2284,7 +2284,7 @@
     .local v2, "now":J
     cmp-long v6, v0, v2
 
-    if-ltz v6, :cond_0
+    if-ltz v6, :cond_17
 
     const-wide/16 v6, 0x7530
 
@@ -2292,19 +2292,19 @@
 
     cmp-long v6, v0, v6
 
-    if-lez v6, :cond_1
+    if-lez v6, :cond_18
 
-    :cond_0
+    :cond_17
     move-wide v0, v4
 
     .line 1074
     .end local v0    # "deadline":J
-    :cond_1
+    :cond_18
     return-wide v0
 .end method
 
 .method public getNextAlarm()Ljava/lang/String;
-    .locals 4
+    .registers 5
 
     .prologue
     .line 1118
@@ -2320,26 +2320,26 @@
 
     .line 1120
     .local v0, "nextAlarm":Ljava/lang/String;
-    if-eqz v0, :cond_0
+    if-eqz v0, :cond_11
 
     invoke-static {v0}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
 
     move-result v1
 
-    if-eqz v1, :cond_1
+    if-eqz v1, :cond_12
 
     .line 1121
-    :cond_0
+    :cond_11
     const/4 v0, 0x0
 
     .line 1123
     .end local v0    # "nextAlarm":Ljava/lang/String;
-    :cond_1
+    :cond_12
     return-object v0
 .end method
 
 .method public getOwnerInfo(I)Ljava/lang/String;
-    .locals 1
+    .registers 3
     .param p1, "userId"    # I
 
     .prologue
@@ -2354,7 +2354,7 @@
 .end method
 
 .method public getPowerButtonInstantlyLocks()Z
-    .locals 2
+    .registers 3
 
     .prologue
     .line 1431
@@ -2370,7 +2370,7 @@
 .end method
 
 .method public getRequestedMinimumPasswordLength()I
-    .locals 3
+    .registers 4
 
     .prologue
     .line 223
@@ -2392,7 +2392,7 @@
 .end method
 
 .method public getRequestedPasswordHistoryLength()I
-    .locals 3
+    .registers 4
 
     .prologue
     .line 235
@@ -2414,7 +2414,7 @@
 .end method
 
 .method public getRequestedPasswordMinimumLetters()I
-    .locals 3
+    .registers 4
 
     .prologue
     .line 239
@@ -2436,7 +2436,7 @@
 .end method
 
 .method public getRequestedPasswordMinimumLowerCase()I
-    .locals 3
+    .registers 4
 
     .prologue
     .line 249
@@ -2458,7 +2458,7 @@
 .end method
 
 .method public getRequestedPasswordMinimumNonLetter()I
-    .locals 3
+    .registers 4
 
     .prologue
     .line 264
@@ -2480,7 +2480,7 @@
 .end method
 
 .method public getRequestedPasswordMinimumNumeric()I
-    .locals 3
+    .registers 4
 
     .prologue
     .line 254
@@ -2502,7 +2502,7 @@
 .end method
 
 .method public getRequestedPasswordMinimumSymbols()I
-    .locals 3
+    .registers 4
 
     .prologue
     .line 259
@@ -2524,7 +2524,7 @@
 .end method
 
 .method public getRequestedPasswordMinimumUpperCase()I
-    .locals 3
+    .registers 4
 
     .prologue
     .line 244
@@ -2546,7 +2546,7 @@
 .end method
 
 .method public getRequestedPasswordQuality()I
-    .locals 3
+    .registers 4
 
     .prologue
     .line 231
@@ -2568,7 +2568,7 @@
 .end method
 
 .method public getWidgetsEnabled()Z
-    .locals 1
+    .registers 2
 
     .prologue
     .line 1460
@@ -2584,7 +2584,7 @@
 .end method
 
 .method public getWidgetsEnabled(I)Z
-    .locals 2
+    .registers 4
     .param p1, "userId"    # I
 
     .prologue
@@ -2601,7 +2601,7 @@
 .end method
 
 .method public hasWidgetsEnabledInKeyguard(I)Z
-    .locals 3
+    .registers 5
     .param p1, "userid"    # I
 
     .prologue
@@ -2615,38 +2615,38 @@
     const/4 v0, 0x0
 
     .local v0, "i":I
-    :goto_0
+    :goto_5
     array-length v2, v1
 
-    if-ge v0, v2, :cond_1
+    if-ge v0, v2, :cond_11
 
     .line 1452
     aget v2, v1, v0
 
-    if-lez v2, :cond_0
+    if-lez v2, :cond_e
 
     .line 1453
     const/4 v2, 0x1
 
     .line 1456
-    :goto_1
+    :goto_d
     return v2
 
     .line 1451
-    :cond_0
+    :cond_e
     add-int/lit8 v0, v0, 0x1
 
-    goto :goto_0
+    goto :goto_5
 
     .line 1456
-    :cond_1
+    :cond_11
     const/4 v2, 0x0
 
-    goto :goto_1
+    goto :goto_d
 .end method
 
 .method public isBiometricWeakEverChosen()Z
-    .locals 2
+    .registers 3
 
     .prologue
     .line 413
@@ -2662,7 +2662,7 @@
 .end method
 
 .method public isBiometricWeakInstalled()Z
-    .locals 8
+    .registers 9
 
     .prologue
     const/4 v4, 0x1
@@ -2678,7 +2678,7 @@
 
     .line 946
     .local v2, "pm":Landroid/content/pm/PackageManager;
-    :try_start_0
+    :try_start_8
     const-string v5, "com.android.facelock"
 
     const/4 v6, 0x1
@@ -2692,36 +2692,36 @@
     iget-object v5, v1, Landroid/content/pm/PackageInfo;->applicationInfo:Landroid/content/pm/ApplicationInfo;
 
     iget-boolean v5, v5, Landroid/content/pm/ApplicationInfo;->enabled:Z
-    :try_end_0
-    .catch Landroid/content/pm/PackageManager$NameNotFoundException; {:try_start_0 .. :try_end_0} :catch_0
+    :try_end_13
+    .catch Landroid/content/pm/PackageManager$NameNotFoundException; {:try_start_8 .. :try_end_13} :catch_16
 
-    if-nez v5, :cond_1
+    if-nez v5, :cond_18
 
     .line 964
     .end local v1    # "pi":Landroid/content/pm/PackageInfo;
-    :cond_0
-    :goto_0
+    :cond_15
+    :goto_15
     return v3
 
     .line 951
-    :catch_0
+    :catch_16
     move-exception v0
 
     .line 952
     .local v0, "e":Landroid/content/pm/PackageManager$NameNotFoundException;
-    goto :goto_0
+    goto :goto_15
 
     .line 956
     .end local v0    # "e":Landroid/content/pm/PackageManager$NameNotFoundException;
     .restart local v1    # "pi":Landroid/content/pm/PackageInfo;
-    :cond_1
+    :cond_18
     const-string v5, "android.hardware.camera.front"
 
     invoke-virtual {v2, v5}, Landroid/content/pm/PackageManager;->hasSystemFeature(Ljava/lang/String;)Z
 
     move-result v5
 
-    if-eqz v5, :cond_0
+    if-eqz v5, :cond_15
 
     .line 959
     invoke-virtual {p0}, Lcom/android/internal/widget/LockPatternUtils;->getDevicePolicyManager()Landroid/app/admin/DevicePolicyManager;
@@ -2738,16 +2738,16 @@
 
     move-result v5
 
-    if-nez v5, :cond_0
+    if-nez v5, :cond_15
 
     move v3, v4
 
     .line 964
-    goto :goto_0
+    goto :goto_15
 .end method
 
 .method public isBiometricWeakLivelinessEnabled()Z
-    .locals 6
+    .registers 7
 
     .prologue
     const-wide/16 v4, 0x0
@@ -2767,21 +2767,21 @@
 
     cmp-long v2, v2, v4
 
-    if-eqz v2, :cond_0
+    if-eqz v2, :cond_11
 
     const/4 v2, 0x1
 
-    :goto_0
+    :goto_10
     return v2
 
-    :cond_0
+    :cond_11
     const/4 v2, 0x0
 
-    goto :goto_0
+    goto :goto_10
 .end method
 
 .method public isEmergencyCallCapable()Z
-    .locals 2
+    .registers 3
 
     .prologue
     .line 1099
@@ -2801,7 +2801,7 @@
 .end method
 
 .method public isEmergencyCallEnabledWhileSimLocked()Z
-    .locals 2
+    .registers 3
 
     .prologue
     .line 1109
@@ -2821,7 +2821,7 @@
 .end method
 
 .method public isLockPasswordEnabled()Z
-    .locals 15
+    .registers 16
 
     .prologue
     const-wide/32 v13, 0x40000
@@ -2853,101 +2853,101 @@
     .local v1, "backupMode":J
     cmp-long v8, v3, v13
 
-    if-eqz v8, :cond_0
+    if-eqz v8, :cond_2c
 
     cmp-long v8, v3, v11
 
-    if-eqz v8, :cond_0
+    if-eqz v8, :cond_2c
 
     const-wide/32 v8, 0x50000
 
     cmp-long v8, v3, v8
 
-    if-eqz v8, :cond_0
+    if-eqz v8, :cond_2c
 
     const-wide/32 v8, 0x60000
 
     cmp-long v8, v3, v8
 
-    if-nez v8, :cond_3
+    if-nez v8, :cond_55
 
-    :cond_0
+    :cond_2c
     move v5, v7
 
     .line 916
     .local v5, "passwordEnabled":Z
-    :goto_0
+    :goto_2d
     cmp-long v8, v1, v13
 
-    if-eqz v8, :cond_1
+    if-eqz v8, :cond_43
 
     cmp-long v8, v1, v11
 
-    if-eqz v8, :cond_1
+    if-eqz v8, :cond_43
 
     const-wide/32 v8, 0x50000
 
     cmp-long v8, v1, v8
 
-    if-eqz v8, :cond_1
+    if-eqz v8, :cond_43
 
     const-wide/32 v8, 0x60000
 
     cmp-long v8, v1, v8
 
-    if-nez v8, :cond_4
+    if-nez v8, :cond_57
 
-    :cond_1
+    :cond_43
     move v0, v7
 
     .line 921
     .local v0, "backupEnabled":Z
-    :goto_1
+    :goto_44
     invoke-virtual {p0}, Lcom/android/internal/widget/LockPatternUtils;->savedPasswordExists()Z
 
     move-result v8
 
-    if-eqz v8, :cond_5
+    if-eqz v8, :cond_59
 
-    if-nez v5, :cond_2
+    if-nez v5, :cond_54
 
     invoke-virtual {p0}, Lcom/android/internal/widget/LockPatternUtils;->usingBiometricWeak()Z
 
     move-result v8
 
-    if-eqz v8, :cond_5
+    if-eqz v8, :cond_59
 
-    if-eqz v0, :cond_5
+    if-eqz v0, :cond_59
 
-    :cond_2
-    :goto_2
+    :cond_54
+    :goto_54
     return v7
 
     .end local v0    # "backupEnabled":Z
     .end local v5    # "passwordEnabled":Z
-    :cond_3
+    :cond_55
     move v5, v6
 
     .line 912
-    goto :goto_0
+    goto :goto_2d
 
     .restart local v5    # "passwordEnabled":Z
-    :cond_4
+    :cond_57
     move v0, v6
 
     .line 916
-    goto :goto_1
+    goto :goto_44
 
     .restart local v0    # "backupEnabled":Z
-    :cond_5
+    :cond_59
     move v7, v6
 
     .line 921
-    goto :goto_2
+    goto :goto_54
 .end method
 
 .method public isLockPatternEnabled()Z
-    .locals 7
+    .registers 8
 
     .prologue
     const/4 v1, 0x1
@@ -2965,20 +2965,20 @@
 
     cmp-long v3, v3, v5
 
-    if-nez v3, :cond_1
+    if-nez v3, :cond_2b
 
     move v0, v1
 
     .line 933
     .local v0, "backupEnabled":Z
-    :goto_0
+    :goto_10
     const-string v3, "lock_pattern_autolock"
 
     invoke-direct {p0, v3, v2}, Lcom/android/internal/widget/LockPatternUtils;->getBoolean(Ljava/lang/String;Z)Z
 
     move-result v3
 
-    if-eqz v3, :cond_2
+    if-eqz v3, :cond_2d
 
     const-string v3, "lockscreen.password_type"
 
@@ -2988,37 +2988,37 @@
 
     cmp-long v3, v3, v5
 
-    if-eqz v3, :cond_0
+    if-eqz v3, :cond_2a
 
     invoke-virtual {p0}, Lcom/android/internal/widget/LockPatternUtils;->usingBiometricWeak()Z
 
     move-result v3
 
-    if-eqz v3, :cond_2
+    if-eqz v3, :cond_2d
 
-    if-eqz v0, :cond_2
+    if-eqz v0, :cond_2d
 
-    :cond_0
-    :goto_1
+    :cond_2a
+    :goto_2a
     return v1
 
     .end local v0    # "backupEnabled":Z
-    :cond_1
+    :cond_2b
     move v0, v2
 
     .line 929
-    goto :goto_0
+    goto :goto_10
 
     .restart local v0    # "backupEnabled":Z
-    :cond_2
+    :cond_2d
     move v1, v2
 
     .line 933
-    goto :goto_1
+    goto :goto_2a
 .end method
 
 .method public isLockScreenDisabled()Z
-    .locals 4
+    .registers 5
 
     .prologue
     const-wide/16 v2, 0x0
@@ -3028,7 +3028,7 @@
 
     move-result v0
 
-    if-nez v0, :cond_0
+    if-nez v0, :cond_14
 
     const-string v0, "lockscreen.disabled"
 
@@ -3038,21 +3038,21 @@
 
     cmp-long v0, v0, v2
 
-    if-eqz v0, :cond_0
+    if-eqz v0, :cond_14
 
     const/4 v0, 0x1
 
-    :goto_0
+    :goto_13
     return v0
 
-    :cond_0
+    :cond_14
     const/4 v0, 0x0
 
-    goto :goto_0
+    goto :goto_13
 .end method
 
 .method public isOwnerInfoEnabled()Z
-    .locals 2
+    .registers 3
 
     .prologue
     .line 568
@@ -3068,7 +3068,7 @@
 .end method
 
 .method public isPatternEverChosen()Z
-    .locals 2
+    .registers 3
 
     .prologue
     .line 403
@@ -3084,7 +3084,7 @@
 .end method
 
 .method public isPermanentlyLocked()Z
-    .locals 2
+    .registers 3
 
     .prologue
     .line 1083
@@ -3100,7 +3100,7 @@
 .end method
 
 .method public isPukUnlockScreenEnable()Z
-    .locals 2
+    .registers 3
 
     .prologue
     .line 1104
@@ -3120,7 +3120,7 @@
 .end method
 
 .method public isSecure()Z
-    .locals 10
+    .registers 11
 
     .prologue
     const/4 v6, 0x1
@@ -3140,130 +3140,130 @@
 
     cmp-long v8, v4, v8
 
-    if-nez v8, :cond_2
+    if-nez v8, :cond_4f
 
     move v3, v6
 
     .line 1331
     .local v3, "isPattern":Z
-    :goto_0
+    :goto_f
     const-wide/32 v8, 0x20000
 
     cmp-long v8, v4, v8
 
-    if-eqz v8, :cond_0
+    if-eqz v8, :cond_2b
 
     const-wide/32 v8, 0x40000
 
     cmp-long v8, v4, v8
 
-    if-eqz v8, :cond_0
+    if-eqz v8, :cond_2b
 
     const-wide/32 v8, 0x50000
 
     cmp-long v8, v4, v8
 
-    if-eqz v8, :cond_0
+    if-eqz v8, :cond_2b
 
     const-wide/32 v8, 0x60000
 
     cmp-long v8, v4, v8
 
-    if-nez v8, :cond_3
+    if-nez v8, :cond_51
 
-    :cond_0
+    :cond_2b
     move v2, v6
 
     .line 1335
     .local v2, "isPassword":Z
-    :goto_1
-    if-eqz v3, :cond_4
+    :goto_2c
+    if-eqz v3, :cond_53
 
     invoke-virtual {p0}, Lcom/android/internal/widget/LockPatternUtils;->isLockPatternEnabled()Z
 
     move-result v8
 
-    if-eqz v8, :cond_4
+    if-eqz v8, :cond_53
 
     invoke-virtual {p0}, Lcom/android/internal/widget/LockPatternUtils;->savedPatternExists()Z
 
     move-result v8
 
-    if-eqz v8, :cond_4
+    if-eqz v8, :cond_53
 
     move v1, v6
 
     .line 1336
     .local v1, "hasPattern":Z
-    :goto_2
-    if-eqz v2, :cond_5
+    :goto_3b
+    if-eqz v2, :cond_55
 
     invoke-virtual {p0}, Lcom/android/internal/widget/LockPatternUtils;->savedPasswordExists()Z
 
     move-result v8
 
-    if-eqz v8, :cond_5
+    if-eqz v8, :cond_55
 
     move v0, v6
 
     .line 1338
     .local v0, "hasPassword":Z
-    :goto_3
-    if-nez v1, :cond_1
+    :goto_44
+    if-nez v1, :cond_48
 
-    if-eqz v0, :cond_6
+    if-eqz v0, :cond_57
 
-    :cond_1
+    :cond_48
     invoke-virtual {p0}, Lcom/android/internal/widget/LockPatternUtils;->getActiveProfileLockMode()I
 
     move-result v8
 
-    if-nez v8, :cond_6
+    if-nez v8, :cond_57
 
-    :goto_4
+    :goto_4e
     return v6
 
     .end local v0    # "hasPassword":Z
     .end local v1    # "hasPattern":Z
     .end local v2    # "isPassword":Z
     .end local v3    # "isPattern":Z
-    :cond_2
+    :cond_4f
     move v3, v7
 
     .line 1330
-    goto :goto_0
+    goto :goto_f
 
     .restart local v3    # "isPattern":Z
-    :cond_3
+    :cond_51
     move v2, v7
 
     .line 1331
-    goto :goto_1
+    goto :goto_2c
 
     .restart local v2    # "isPassword":Z
-    :cond_4
+    :cond_53
     move v1, v7
 
     .line 1335
-    goto :goto_2
+    goto :goto_3b
 
     .restart local v1    # "hasPattern":Z
-    :cond_5
+    :cond_55
     move v0, v7
 
     .line 1336
-    goto :goto_3
+    goto :goto_44
 
     .restart local v0    # "hasPassword":Z
-    :cond_6
+    :cond_57
     move v6, v7
 
     .line 1338
-    goto :goto_4
+    goto :goto_4e
 .end method
 
 .method public isShowErrorPath()Z
-    .locals 2
+    .registers 3
 
     .prologue
     .line 1049
@@ -3279,7 +3279,7 @@
 .end method
 
 .method public isTactileFeedbackEnabled()Z
-    .locals 4
+    .registers 5
 
     .prologue
     const/4 v0, 0x1
@@ -3295,19 +3295,19 @@
 
     move-result v1
 
-    if-eqz v1, :cond_0
+    if-eqz v1, :cond_d
 
-    :goto_0
+    :goto_c
     return v0
 
-    :cond_0
+    :cond_d
     const/4 v0, 0x0
 
-    goto :goto_0
+    goto :goto_c
 .end method
 
 .method public isVisibleDotsEnabled()Z
-    .locals 2
+    .registers 3
 
     .prologue
     .line 1041
@@ -3323,7 +3323,7 @@
 .end method
 
 .method public isVisiblePatternEnabled()Z
-    .locals 2
+    .registers 3
 
     .prologue
     .line 1000
@@ -3339,22 +3339,22 @@
 .end method
 
 .method public passwordToHash(Ljava/lang/String;)[B
-    .locals 9
+    .registers 11
     .param p1, "password"    # Ljava/lang/String;
 
     .prologue
     .line 880
-    if-nez p1, :cond_0
+    if-nez p1, :cond_4
 
     .line 881
     const/4 v2, 0x0
 
     .line 893
-    :goto_0
+    :goto_3
     return-object v2
 
     .line 883
-    :cond_0
+    :cond_4
     const/4 v0, 0x0
 
     .line 884
@@ -3363,7 +3363,7 @@
 
     .line 886
     .local v2, "hashed":[B
-    :try_start_0
+    :try_start_6
     new-instance v6, Ljava/lang/StringBuilder;
 
     invoke-direct {v6}, Ljava/lang/StringBuilder;-><init>()V
@@ -3439,18 +3439,18 @@
     move-result-object v6
 
     invoke-virtual {v6}, Ljava/lang/String;->getBytes()[B
-    :try_end_0
-    .catch Ljava/security/NoSuchAlgorithmException; {:try_start_0 .. :try_end_0} :catch_0
+    :try_end_4f
+    .catch Ljava/security/NoSuchAlgorithmException; {:try_start_6 .. :try_end_4f} :catch_51
 
     move-result-object v2
 
-    goto :goto_0
+    goto :goto_3
 
     .line 890
     .end local v3    # "md5":[B
     .end local v4    # "saltedPassword":[B
     .end local v5    # "sha1":[B
-    :catch_0
+    :catch_51
     move-exception v1
 
     .line 891
@@ -3477,11 +3477,11 @@
 
     invoke-static {v6, v7}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
 
-    goto :goto_0
+    goto :goto_3
 .end method
 
 .method public patternToHash(Ljava/util/List;)[B
-    .locals 9
+    .registers 11
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
@@ -3495,17 +3495,17 @@
     .prologue
     .line 838
     .local p1, "pattern":Ljava/util/List;, "Ljava/util/List<Lcom/android/internal/widget/LockPatternView$Cell;>;"
-    if-nez p1, :cond_0
+    if-nez p1, :cond_4
 
     .line 839
     const/4 v1, 0x0
 
     .line 853
-    :goto_0
+    :goto_3
     return-object v1
 
     .line 842
-    :cond_0
+    :cond_4
     invoke-interface {p1}, Ljava/util/List;->size()I
 
     move-result v5
@@ -3519,8 +3519,8 @@
     const/4 v2, 0x0
 
     .local v2, "i":I
-    :goto_1
-    if-ge v2, v5, :cond_1
+    :goto_b
+    if-ge v2, v5, :cond_24
 
     .line 845
     invoke-interface {p1, v2}, Ljava/util/List;->get(I)Ljava/lang/Object;
@@ -3550,12 +3550,12 @@
     .line 844
     add-int/lit8 v2, v2, 0x1
 
-    goto :goto_1
+    goto :goto_b
 
     .line 849
     .end local v0    # "cell":Lcom/android/internal/widget/LockPatternView$Cell;
-    :cond_1
-    :try_start_0
+    :cond_24
+    :try_start_24
     const-string v7, "SHA-1"
 
     invoke-static {v7}, Ljava/security/MessageDigest;->getInstance(Ljava/lang/String;)Ljava/security/MessageDigest;
@@ -3565,30 +3565,30 @@
     .line 850
     .local v3, "md":Ljava/security/MessageDigest;
     invoke-virtual {v3, v6}, Ljava/security/MessageDigest;->digest([B)[B
-    :try_end_0
-    .catch Ljava/security/NoSuchAlgorithmException; {:try_start_0 .. :try_end_0} :catch_0
+    :try_end_2d
+    .catch Ljava/security/NoSuchAlgorithmException; {:try_start_24 .. :try_end_2d} :catch_2f
 
     move-result-object v1
 
     .line 851
     .local v1, "hash":[B
-    goto :goto_0
+    goto :goto_3
 
     .line 852
     .end local v1    # "hash":[B
     .end local v3    # "md":Ljava/security/MessageDigest;
-    :catch_0
+    :catch_2f
     move-exception v4
 
     .local v4, "nsa":Ljava/security/NoSuchAlgorithmException;
     move-object v1, v6
 
     .line 853
-    goto :goto_0
+    goto :goto_3
 .end method
 
 .method public removeAppWidget(I)Z
-    .locals 6
+    .registers 8
     .param p1, "widgetId"    # I
 
     .prologue
@@ -3603,15 +3603,15 @@
     .local v3, "widgets":[I
     array-length v5, v3
 
-    if-nez v5, :cond_1
+    if-nez v5, :cond_9
 
     .line 1282
-    :cond_0
-    :goto_0
+    :cond_8
+    :goto_8
     return v4
 
     .line 1269
-    :cond_1
+    :cond_9
     array-length v5, v3
 
     add-int/lit8 v5, v5, -0x1
@@ -3626,27 +3626,27 @@
     const/4 v1, 0x0
 
     .local v1, "j":I
-    :goto_1
+    :goto_10
     array-length v5, v3
 
-    if-ge v0, v5, :cond_3
+    if-ge v0, v5, :cond_24
 
     .line 1271
     aget v5, v3, v0
 
-    if-ne v5, p1, :cond_2
+    if-ne v5, p1, :cond_1a
 
     .line 1270
-    :goto_2
+    :goto_17
     add-int/lit8 v0, v0, 0x1
 
-    goto :goto_1
+    goto :goto_10
 
     .line 1273
-    :cond_2
+    :cond_1a
     array-length v5, v2
 
-    if-ge v1, v5, :cond_0
+    if-ge v1, v5, :cond_8
 
     .line 1277
     aget v5, v3, v0
@@ -3656,20 +3656,20 @@
     .line 1278
     add-int/lit8 v1, v1, 0x1
 
-    goto :goto_2
+    goto :goto_17
 
     .line 1281
-    :cond_3
+    :cond_24
     invoke-direct {p0, v2}, Lcom/android/internal/widget/LockPatternUtils;->writeAppWidgets([I)V
 
     .line 1282
     const/4 v4, 0x1
 
-    goto :goto_0
+    goto :goto_8
 .end method
 
 .method public removeUser(I)V
-    .locals 4
+    .registers 6
     .param p1, "userId"    # I
 
     .prologue
@@ -3680,15 +3680,15 @@
     move-result-object v1
 
     invoke-interface {v1, p1}, Lcom/android/internal/widget/ILockSettings;->removeUser(I)V
-    :try_end_0
-    .catch Landroid/os/RemoteException; {:try_start_0 .. :try_end_0} :catch_0
+    :try_end_7
+    .catch Landroid/os/RemoteException; {:try_start_0 .. :try_end_7} :catch_8
 
     .line 303
-    :goto_0
+    :goto_7
     return-void
 
     .line 300
-    :catch_0
+    :catch_8
     move-exception v0
 
     .line 301
@@ -3715,11 +3715,11 @@
 
     invoke-static {v1, v2}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    goto :goto_0
+    goto :goto_7
 .end method
 
 .method public reportFailedPasswordAttempt()V
-    .locals 2
+    .registers 3
 
     .prologue
     .line 274
@@ -3738,7 +3738,7 @@
 .end method
 
 .method public reportSuccessfulPasswordAttempt()V
-    .locals 2
+    .registers 3
 
     .prologue
     .line 278
@@ -3757,7 +3757,7 @@
 .end method
 
 .method public resumeCall()Z
-    .locals 2
+    .registers 3
 
     .prologue
     .line 1404
@@ -3773,37 +3773,37 @@
 
     .line 1406
     .local v0, "phone":Lcom/android/internal/telephony/ITelephony;
-    if-eqz v0, :cond_0
+    if-eqz v0, :cond_15
 
-    :try_start_0
+    :try_start_c
     invoke-interface {v0}, Lcom/android/internal/telephony/ITelephony;->showCallScreen()Z
-    :try_end_0
-    .catch Landroid/os/RemoteException; {:try_start_0 .. :try_end_0} :catch_0
+    :try_end_f
+    .catch Landroid/os/RemoteException; {:try_start_c .. :try_end_f} :catch_14
 
     move-result v1
 
-    if-eqz v1, :cond_0
+    if-eqz v1, :cond_15
 
     .line 1407
     const/4 v1, 0x1
 
     .line 1412
-    :goto_0
+    :goto_13
     return v1
 
     .line 1409
-    :catch_0
+    :catch_14
     move-exception v1
 
     .line 1412
-    :cond_0
+    :cond_15
     const/4 v1, 0x0
 
-    goto :goto_0
+    goto :goto_13
 .end method
 
 .method public saveEncryptionPassword(Ljava/lang/String;)V
-    .locals 1
+    .registers 3
     .param p1, "password"    # Ljava/lang/String;
 
     .prologue
@@ -3819,27 +3819,27 @@
 .end method
 
 .method public saveEncryptionPassword(Ljava/lang/String;I)V
-    .locals 0
+    .registers 3
     .param p1, "password"    # Ljava/lang/String;
     .param p2, "userHandle"    # I
 
     .prologue
     .line 755
-    if-eqz p1, :cond_0
+    if-eqz p1, :cond_7
 
     .line 756
-    if-nez p2, :cond_0
+    if-nez p2, :cond_7
 
     .line 758
     invoke-direct {p0, p1}, Lcom/android/internal/widget/LockPatternUtils;->updateEncryptionPassword(Ljava/lang/String;)V
 
     .line 761
-    :cond_0
+    :cond_7
     return-void
 .end method
 
 .method public saveLockPassword(Ljava/lang/String;I)V
-    .locals 2
+    .registers 5
     .param p1, "password"    # Ljava/lang/String;
     .param p2, "quality"    # I
 
@@ -3858,7 +3858,7 @@
 .end method
 
 .method public saveLockPassword(Ljava/lang/String;IZ)V
-    .locals 1
+    .registers 5
     .param p1, "password"    # Ljava/lang/String;
     .param p2, "quality"    # I
     .param p3, "isFallback"    # Z
@@ -3876,7 +3876,7 @@
 .end method
 
 .method public saveLockPassword(Ljava/lang/String;IZI)V
-    .locals 29
+    .registers 34
     .param p1, "password"    # Ljava/lang/String;
     .param p2, "quality"    # I
     .param p3, "isFallback"    # Z
@@ -3902,23 +3902,23 @@
 
     .line 656
     .local v3, "dpm":Landroid/app/admin/DevicePolicyManager;
-    if-eqz p1, :cond_9
+    if-eqz p1, :cond_161
 
     .line 657
-    if-nez p4, :cond_0
+    if-nez p4, :cond_16
 
     .line 659
     invoke-direct/range {p0 .. p1}, Lcom/android/internal/widget/LockPatternUtils;->updateEncryptionPassword(Ljava/lang/String;)V
 
     .line 662
-    :cond_0
+    :cond_16
     invoke-static/range {p1 .. p1}, Lcom/android/internal/widget/LockPatternUtils;->computePasswordQuality(Ljava/lang/String;)I
 
     move-result v23
 
     .line 663
     .local v23, "computedQuality":I
-    if-nez p3, :cond_7
+    if-nez p3, :cond_eb
 
     .line 664
     invoke-virtual/range {p0 .. p0}, Lcom/android/internal/widget/LockPatternUtils;->deleteGallery()V
@@ -3943,7 +3943,7 @@
     invoke-direct {v0, v4, v12, v13, v1}, Lcom/android/internal/widget/LockPatternUtils;->setLong(Ljava/lang/String;JI)V
 
     .line 666
-    if-eqz v23, :cond_6
+    if-eqz v23, :cond_bb
 
     .line 667
     const/4 v6, 0x0
@@ -3973,14 +3973,14 @@
     const/16 v25, 0x0
 
     .local v25, "i":I
-    :goto_0
+    :goto_3b
     invoke-virtual/range {p1 .. p1}, Ljava/lang/String;->length()I
 
     move-result v4
 
     move/from16 v0, v25
 
-    if-ge v0, v4, :cond_4
+    if-ge v0, v4, :cond_85
 
     .line 674
     move-object/from16 v0, p1
@@ -3997,13 +3997,13 @@
 
     move/from16 v0, v22
 
-    if-lt v0, v4, :cond_1
+    if-lt v0, v4, :cond_5e
 
     const/16 v4, 0x5a
 
     move/from16 v0, v22
 
-    if-gt v0, v4, :cond_1
+    if-gt v0, v4, :cond_5e
 
     .line 676
     add-int/lit8 v6, v6, 0x1
@@ -4012,24 +4012,24 @@
     add-int/lit8 v7, v7, 0x1
 
     .line 673
-    :goto_1
+    :goto_5b
     add-int/lit8 v25, v25, 0x1
 
-    goto :goto_0
+    goto :goto_3b
 
     .line 678
-    :cond_1
+    :cond_5e
     const/16 v4, 0x61
 
     move/from16 v0, v22
 
-    if-lt v0, v4, :cond_2
+    if-lt v0, v4, :cond_6f
 
     const/16 v4, 0x7a
 
     move/from16 v0, v22
 
-    if-gt v0, v4, :cond_2
+    if-gt v0, v4, :cond_6f
 
     .line 679
     add-int/lit8 v6, v6, 0x1
@@ -4037,21 +4037,21 @@
     .line 680
     add-int/lit8 v8, v8, 0x1
 
-    goto :goto_1
+    goto :goto_5b
 
     .line 681
-    :cond_2
+    :cond_6f
     const/16 v4, 0x30
 
     move/from16 v0, v22
 
-    if-lt v0, v4, :cond_3
+    if-lt v0, v4, :cond_80
 
     const/16 v4, 0x39
 
     move/from16 v0, v22
 
-    if-gt v0, v4, :cond_3
+    if-gt v0, v4, :cond_80
 
     .line 682
     add-int/lit8 v9, v9, 0x1
@@ -4059,20 +4059,20 @@
     .line 683
     add-int/lit8 v11, v11, 0x1
 
-    goto :goto_1
+    goto :goto_5b
 
     .line 685
-    :cond_3
+    :cond_80
     add-int/lit8 v10, v10, 0x1
 
     .line 686
     add-int/lit8 v11, v11, 0x1
 
-    goto :goto_1
+    goto :goto_5b
 
     .line 689
     .end local v22    # "c":C
-    :cond_4
+    :cond_85
     move/from16 v0, p2
 
     move/from16 v1, v23
@@ -4097,7 +4097,7 @@
     .end local v10    # "symbols":I
     .end local v11    # "nonletter":I
     .end local v25    # "i":I
-    :goto_2
+    :goto_96
     const-string v4, "lockscreen.passwordhistory"
 
     move-object/from16 v0, p0
@@ -4110,7 +4110,7 @@
 
     .line 712
     .local v26, "passwordHistory":Ljava/lang/String;
-    if-nez v26, :cond_5
+    if-nez v26, :cond_a7
 
     .line 713
     new-instance v26, Ljava/lang/String;
@@ -4120,20 +4120,20 @@
 
     .line 715
     .restart local v26    # "passwordHistory":Ljava/lang/String;
-    :cond_5
+    :cond_a7
     invoke-virtual/range {p0 .. p0}, Lcom/android/internal/widget/LockPatternUtils;->getRequestedPasswordHistoryLength()I
 
     move-result v27
 
     .line 716
     .local v27, "passwordHistoryLength":I
-    if-nez v27, :cond_8
+    if-nez v27, :cond_123
 
     .line 717
     const-string v26, ""
 
     .line 727
-    :goto_3
+    :goto_af
     const-string v4, "lockscreen.passwordhistory"
 
     move-object/from16 v0, p0
@@ -4149,13 +4149,13 @@
     .end local v23    # "computedQuality":I
     .end local v26    # "passwordHistory":Ljava/lang/String;
     .end local v27    # "passwordHistoryLength":I
-    :goto_4
+    :goto_ba
     return-void
 
     .line 694
     .restart local v3    # "dpm":Landroid/app/admin/DevicePolicyManager;
     .restart local v23    # "computedQuality":I
-    :cond_6
+    :cond_bb
     const/4 v13, 0x0
 
     const/4 v14, 0x0
@@ -4177,15 +4177,15 @@
     move/from16 v21, p4
 
     invoke-virtual/range {v12 .. v21}, Landroid/app/admin/DevicePolicyManager;->setActivePasswordState(IIIIIIIII)V
-    :try_end_0
-    .catch Landroid/os/RemoteException; {:try_start_0 .. :try_end_0} :catch_0
+    :try_end_ce
+    .catch Landroid/os/RemoteException; {:try_start_0 .. :try_end_ce} :catch_cf
 
-    goto :goto_2
+    goto :goto_96
 
     .line 733
     .end local v3    # "dpm":Landroid/app/admin/DevicePolicyManager;
     .end local v23    # "computedQuality":I
-    :catch_0
+    :catch_cf
     move-exception v28
 
     .line 735
@@ -4214,14 +4214,14 @@
 
     invoke-static {v4, v5}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    goto :goto_4
+    goto :goto_ba
 
     .line 700
     .end local v28    # "re":Landroid/os/RemoteException;
     .restart local v3    # "dpm":Landroid/app/admin/DevicePolicyManager;
     .restart local v23    # "computedQuality":I
-    :cond_7
-    :try_start_1
+    :cond_eb
+    :try_start_eb
     const-string v4, "lockscreen.password_type"
 
     const-wide/32 v12, 0x8000
@@ -4277,12 +4277,12 @@
 
     invoke-virtual/range {v12 .. v21}, Landroid/app/admin/DevicePolicyManager;->setActivePasswordState(IIIIIIIII)V
 
-    goto/16 :goto_2
+    goto/16 :goto_96
 
     .line 719
     .restart local v26    # "passwordHistory":Ljava/lang/String;
     .restart local v27    # "passwordHistoryLength":I
-    :cond_8
+    :cond_123
     invoke-virtual/range {p0 .. p1}, Lcom/android/internal/widget/LockPatternUtils;->passwordToHash(Ljava/lang/String;)[B
 
     move-result-object v24
@@ -4346,14 +4346,14 @@
 
     move-result-object v26
 
-    goto/16 :goto_3
+    goto/16 :goto_af
 
     .line 729
     .end local v23    # "computedQuality":I
     .end local v24    # "hash":[B
     .end local v26    # "passwordHistory":Ljava/lang/String;
     .end local v27    # "passwordHistoryLength":I
-    :cond_9
+    :cond_161
     const/4 v13, 0x0
 
     const/4 v14, 0x0
@@ -4375,14 +4375,14 @@
     move/from16 v21, p4
 
     invoke-virtual/range {v12 .. v21}, Landroid/app/admin/DevicePolicyManager;->setActivePasswordState(IIIIIIIII)V
-    :try_end_1
-    .catch Landroid/os/RemoteException; {:try_start_1 .. :try_end_1} :catch_0
+    :try_end_174
+    .catch Landroid/os/RemoteException; {:try_start_eb .. :try_end_174} :catch_cf
 
-    goto/16 :goto_4
+    goto/16 :goto_ba
 .end method
 
 .method public saveLockPattern(Ljava/util/List;)V
-    .locals 1
+    .registers 3
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
@@ -4405,7 +4405,7 @@
 .end method
 
 .method public saveLockPattern(Ljava/util/List;Z)V
-    .locals 11
+    .registers 14
     .param p2, "isFallback"    # Z
     .annotation system Ldalvik/annotation/Signature;
         value = {
@@ -4442,7 +4442,7 @@
 
     .line 531
     .local v0, "dpm":Landroid/app/admin/DevicePolicyManager;
-    if-eqz p1, :cond_1
+    if-eqz p1, :cond_7b
 
     .line 532
     const-string v1, "lockscreen.patterneverchosen"
@@ -4452,7 +4452,7 @@
     invoke-direct {p0, v1, v2}, Lcom/android/internal/widget/LockPatternUtils;->setBoolean(Ljava/lang/String;Z)V
 
     .line 533
-    if-nez p2, :cond_0
+    if-nez p2, :cond_3c
 
     .line 534
     invoke-virtual {p0}, Lcom/android/internal/widget/LockPatternUtils;->deleteGallery()V
@@ -4491,12 +4491,12 @@
 
     .line 553
     .end local v0    # "dpm":Landroid/app/admin/DevicePolicyManager;
-    :goto_0
+    :goto_3b
     return-void
 
     .line 539
     .restart local v0    # "dpm":Landroid/app/admin/DevicePolicyManager;
-    :cond_0
+    :cond_3c
     const-string v1, "lockscreen.password_type"
 
     const-wide/32 v2, 0x8000
@@ -4535,14 +4535,14 @@
     move-result v9
 
     invoke-virtual/range {v0 .. v9}, Landroid/app/admin/DevicePolicyManager;->setActivePasswordState(IIIIIIIII)V
-    :try_end_0
-    .catch Landroid/os/RemoteException; {:try_start_0 .. :try_end_0} :catch_0
+    :try_end_60
+    .catch Landroid/os/RemoteException; {:try_start_0 .. :try_end_60} :catch_61
 
-    goto :goto_0
+    goto :goto_3b
 
     .line 550
     .end local v0    # "dpm":Landroid/app/admin/DevicePolicyManager;
-    :catch_0
+    :catch_61
     move-exception v10
 
     .line 551
@@ -4569,12 +4569,12 @@
 
     invoke-static {v1, v2}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    goto :goto_0
+    goto :goto_3b
 
     .line 547
     .end local v10    # "re":Landroid/os/RemoteException;
     .restart local v0    # "dpm":Landroid/app/admin/DevicePolicyManager;
-    :cond_1
+    :cond_7b
     const/4 v1, 0x0
 
     const/4 v2, 0x0
@@ -4591,20 +4591,20 @@
 
     const/4 v8, 0x0
 
-    :try_start_1
+    :try_start_83
     invoke-direct {p0}, Lcom/android/internal/widget/LockPatternUtils;->getCurrentOrCallingUserId()I
 
     move-result v9
 
     invoke-virtual/range {v0 .. v9}, Landroid/app/admin/DevicePolicyManager;->setActivePasswordState(IIIIIIIII)V
-    :try_end_1
-    .catch Landroid/os/RemoteException; {:try_start_1 .. :try_end_1} :catch_0
+    :try_end_8a
+    .catch Landroid/os/RemoteException; {:try_start_83 .. :try_end_8a} :catch_61
 
-    goto :goto_0
+    goto :goto_3b
 .end method
 
 .method public savedPasswordExists()Z
-    .locals 3
+    .registers 4
 
     .prologue
     .line 390
@@ -4618,28 +4618,28 @@
     move-result v2
 
     invoke-interface {v1, v2}, Lcom/android/internal/widget/ILockSettings;->havePassword(I)Z
-    :try_end_0
-    .catch Landroid/os/RemoteException; {:try_start_0 .. :try_end_0} :catch_0
+    :try_end_b
+    .catch Landroid/os/RemoteException; {:try_start_0 .. :try_end_b} :catch_d
 
     move-result v1
 
     .line 392
-    :goto_0
+    :goto_c
     return v1
 
     .line 391
-    :catch_0
+    :catch_d
     move-exception v0
 
     .line 392
     .local v0, "re":Landroid/os/RemoteException;
     const/4 v1, 0x0
 
-    goto :goto_0
+    goto :goto_c
 .end method
 
 .method public savedPatternExists()Z
-    .locals 3
+    .registers 4
 
     .prologue
     .line 378
@@ -4653,28 +4653,28 @@
     move-result v2
 
     invoke-interface {v1, v2}, Lcom/android/internal/widget/ILockSettings;->havePattern(I)Z
-    :try_end_0
-    .catch Landroid/os/RemoteException; {:try_start_0 .. :try_end_0} :catch_0
+    :try_end_b
+    .catch Landroid/os/RemoteException; {:try_start_0 .. :try_end_b} :catch_d
 
     move-result v1
 
     .line 380
-    :goto_0
+    :goto_c
     return v1
 
     .line 379
-    :catch_0
+    :catch_d
     move-exception v0
 
     .line 380
     .local v0, "re":Landroid/os/RemoteException;
     const/4 v1, 0x0
 
-    goto :goto_0
+    goto :goto_c
 .end method
 
 .method public setBiometricWeakLivelinessEnabled(Z)V
-    .locals 7
+    .registers 9
     .param p1, "enabled"    # Z
 
     .prologue
@@ -4689,7 +4689,7 @@
 
     .line 973
     .local v0, "currentFlag":J
-    if-eqz p1, :cond_0
+    if-eqz p1, :cond_14
 
     .line 974
     const-wide/16 v4, 0x1
@@ -4698,7 +4698,7 @@
 
     .line 978
     .local v2, "newFlag":J
-    :goto_0
+    :goto_e
     const-string v4, "lock_biometric_weak_flags"
 
     invoke-direct {p0, v4, v2, v3}, Lcom/android/internal/widget/LockPatternUtils;->setLong(Ljava/lang/String;J)V
@@ -4708,17 +4708,17 @@
 
     .line 976
     .end local v2    # "newFlag":J
-    :cond_0
+    :cond_14
     const-wide/16 v4, -0x2
 
     and-long v2, v0, v4
 
     .restart local v2    # "newFlag":J
-    goto :goto_0
+    goto :goto_e
 .end method
 
 .method public setCameraEnabled(Z)V
-    .locals 1
+    .registers 3
     .param p1, "enabled"    # Z
 
     .prologue
@@ -4734,7 +4734,7 @@
 .end method
 
 .method public setCameraEnabled(ZI)V
-    .locals 1
+    .registers 4
     .param p1, "enabled"    # Z
     .param p2, "userId"    # I
 
@@ -4749,7 +4749,7 @@
 .end method
 
 .method public setCurrentUser(I)V
-    .locals 0
+    .registers 2
     .param p1, "userId"    # I
 
     .prologue
@@ -4761,7 +4761,7 @@
 .end method
 
 .method public setLockBeforeUnlock(Z)V
-    .locals 1
+    .registers 3
     .param p1, "enabled"    # Z
 
     .prologue
@@ -4775,7 +4775,7 @@
 .end method
 
 .method public setLockPatternEnabled(Z)V
-    .locals 1
+    .registers 3
     .param p1, "enabled"    # Z
 
     .prologue
@@ -4789,7 +4789,7 @@
 .end method
 
 .method public setLockPatternSize(J)V
-    .locals 1
+    .registers 4
     .param p1, "size"    # J
 
     .prologue
@@ -4803,32 +4803,32 @@
 .end method
 
 .method public setLockScreenDisabled(Z)V
-    .locals 3
+    .registers 5
     .param p1, "disable"    # Z
 
     .prologue
     .line 481
     const-string v2, "lockscreen.disabled"
 
-    if-eqz p1, :cond_0
+    if-eqz p1, :cond_a
 
     const-wide/16 v0, 0x1
 
-    :goto_0
+    :goto_6
     invoke-direct {p0, v2, v0, v1}, Lcom/android/internal/widget/LockPatternUtils;->setLong(Ljava/lang/String;J)V
 
     .line 482
     return-void
 
     .line 481
-    :cond_0
+    :cond_a
     const-wide/16 v0, 0x0
 
-    goto :goto_0
+    goto :goto_6
 .end method
 
 .method public setLockoutAttemptDeadline()J
-    .locals 6
+    .registers 7
 
     .prologue
     .line 1058
@@ -4851,7 +4851,7 @@
 .end method
 
 .method public setOwnerInfo(Ljava/lang/String;I)V
-    .locals 1
+    .registers 4
     .param p1, "info"    # Ljava/lang/String;
     .param p2, "userId"    # I
 
@@ -4866,7 +4866,7 @@
 .end method
 
 .method public setOwnerInfoEnabled(Z)V
-    .locals 1
+    .registers 3
     .param p1, "enabled"    # Z
 
     .prologue
@@ -4880,7 +4880,7 @@
 .end method
 
 .method public setPermanentlyLocked(Z)V
-    .locals 1
+    .registers 3
     .param p1, "locked"    # Z
 
     .prologue
@@ -4894,7 +4894,7 @@
 .end method
 
 .method public setPowerButtonInstantlyLocks(Z)V
-    .locals 1
+    .registers 3
     .param p1, "enabled"    # Z
 
     .prologue
@@ -4908,7 +4908,7 @@
 .end method
 
 .method public setShowErrorPath(Z)V
-    .locals 1
+    .registers 3
     .param p1, "enabled"    # Z
 
     .prologue
@@ -4922,7 +4922,7 @@
 .end method
 
 .method public setVisibleDotsEnabled(Z)V
-    .locals 1
+    .registers 3
     .param p1, "enabled"    # Z
 
     .prologue
@@ -4936,7 +4936,7 @@
 .end method
 
 .method public setVisiblePatternEnabled(Z)V
-    .locals 1
+    .registers 3
     .param p1, "enabled"    # Z
 
     .prologue
@@ -4950,7 +4950,7 @@
 .end method
 
 .method public setWidgetsEnabled(Z)V
-    .locals 1
+    .registers 3
     .param p1, "enabled"    # Z
 
     .prologue
@@ -4966,7 +4966,7 @@
 .end method
 
 .method public setWidgetsEnabled(ZI)V
-    .locals 1
+    .registers 4
     .param p1, "enabled"    # Z
     .param p2, "userId"    # I
 
@@ -4980,9 +4980,9 @@
     return-void
 .end method
 
-.method public stringToPattern(Ljava/lang/String;)Ljava/util/List;
-    .locals 7
-    .param p1, "string"    # Ljava/lang/String;
+.method public static stringToPattern(Ljava/lang/String;)Ljava/util/List;
+    .registers 8
+    .param p0, "string"    # Ljava/lang/String;
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
@@ -5003,16 +5003,8 @@
 
     .line 800
     .local v3, "result":Ljava/util/List;, "Ljava/util/List<Lcom/android/internal/widget/LockPatternView$Cell;>;"
-    const/4 v4, 0x3
 
-    .line 801
-    .local v4, "size":B
-    const/4 v5, 0x3
-
-    invoke-static {v5}, Lcom/android/internal/widget/LockPatternView$Cell;->updateSize(B)V
-
-    .line 803
-    invoke-virtual {p1}, Ljava/lang/String;->getBytes()[B
+    invoke-virtual {p0}, Ljava/lang/String;->getBytes()[B
 
     move-result-object v1
 
@@ -5021,39 +5013,39 @@
     const/4 v2, 0x0
 
     .local v2, "i":I
-    :goto_0
-    array-length v5, v1
+    :goto_e
+    array-length v4, v1
 
-    if-ge v2, v5, :cond_0
+    if-ge v2, v4, :cond_21
 
     .line 805
     aget-byte v0, v1, v2
 
     .line 806
     .local v0, "b":B
-    div-int/lit8 v5, v0, 0x3
+    div-int/lit8 v4, v0, 0x3
 
-    rem-int/lit8 v6, v0, 0x3
+    rem-int/lit8 v5, v0, 0x3
 
-    invoke-static {v5, v6}, Lcom/android/internal/widget/LockPatternView$Cell;->of(II)Lcom/android/internal/widget/LockPatternView$Cell;
+    invoke-static {v4, v5}, Lcom/android/internal/widget/LockPatternView$Cell;->of(II)Lcom/android/internal/widget/LockPatternView$Cell;
 
-    move-result-object v5
+    move-result-object v4
 
-    invoke-interface {v3, v5}, Ljava/util/List;->add(Ljava/lang/Object;)Z
+    invoke-interface {v3, v4}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
     .line 804
     add-int/lit8 v2, v2, 0x1
 
-    goto :goto_0
+    goto :goto_e
 
     .line 808
     .end local v0    # "b":B
-    :cond_0
+    :cond_21
     return-object v3
 .end method
 
 .method public updateEmergencyCallButtonState(Landroid/widget/Button;IZZ)V
-    .locals 5
+    .registers 10
     .param p1, "button"    # Landroid/widget/Button;
     .param p2, "phoneState"    # I
     .param p3, "shown"    # Z
@@ -5067,9 +5059,9 @@
 
     move-result v4
 
-    if-eqz v4, :cond_0
+    if-eqz v4, :cond_1e
 
-    if-eqz p3, :cond_0
+    if-eqz p3, :cond_1e
 
     .line 1377
     invoke-virtual {p1, v3}, Landroid/widget/Button;->setVisibility(I)V
@@ -5077,75 +5069,75 @@
     .line 1384
     const/4 v4, 0x2
 
-    if-ne p2, v4, :cond_2
+    if-ne p2, v4, :cond_26
 
     .line 1386
     const v2, 0x1040409
 
     .line 1387
     .local v2, "textId":I
-    if-eqz p4, :cond_1
+    if-eqz p4, :cond_24
 
     const v1, 0x1080084
 
     .line 1388
     .local v1, "phoneCallIcon":I
-    :goto_0
+    :goto_17
     invoke-virtual {p1, v1, v3, v3, v3}, Landroid/widget/Button;->setCompoundDrawablesWithIntrinsicBounds(IIII)V
 
     .line 1394
     .end local v1    # "phoneCallIcon":I
-    :goto_1
+    :goto_1a
     invoke-virtual {p1, v2}, Landroid/widget/Button;->setText(I)V
 
     .line 1395
     .end local v2    # "textId":I
-    :goto_2
+    :goto_1d
     return-void
 
     .line 1379
-    :cond_0
+    :cond_1e
     const/16 v3, 0x8
 
     invoke-virtual {p1, v3}, Landroid/widget/Button;->setVisibility(I)V
 
-    goto :goto_2
+    goto :goto_1d
 
     .restart local v2    # "textId":I
-    :cond_1
+    :cond_24
     move v1, v3
 
     .line 1387
-    goto :goto_0
+    goto :goto_17
 
     .line 1390
     .end local v2    # "textId":I
-    :cond_2
+    :cond_26
     const v2, 0x1040408
 
     .line 1391
     .restart local v2    # "textId":I
-    if-eqz p4, :cond_3
+    if-eqz p4, :cond_32
 
     const v0, 0x10802db
 
     .line 1392
     .local v0, "emergencyIcon":I
-    :goto_3
+    :goto_2e
     invoke-virtual {p1, v0, v3, v3, v3}, Landroid/widget/Button;->setCompoundDrawablesWithIntrinsicBounds(IIII)V
 
-    goto :goto_1
+    goto :goto_1a
 
     .end local v0    # "emergencyIcon":I
-    :cond_3
+    :cond_32
     move v0, v3
 
     .line 1391
-    goto :goto_3
+    goto :goto_2e
 .end method
 
 .method public usingBiometricWeak()Z
-    .locals 4
+    .registers 5
 
     .prologue
     .line 787
@@ -5163,21 +5155,21 @@
     .local v0, "quality":I
     const v1, 0x8000
 
-    if-ne v0, v1, :cond_0
+    if-ne v0, v1, :cond_11
 
     const/4 v1, 0x1
 
-    :goto_0
+    :goto_10
     return v1
 
-    :cond_0
+    :cond_11
     const/4 v1, 0x0
 
-    goto :goto_0
+    goto :goto_10
 .end method
 
 .method public writeFallbackAppWidgetId(I)V
-    .locals 3
+    .registers 5
     .param p1, "appWidgetId"    # I
 
     .prologue
