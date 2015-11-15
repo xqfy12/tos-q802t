@@ -4243,7 +4243,7 @@
     goto :goto_1
 .end method
 
-.method public declared-synchronized setWifiEnabled(Ljava/lang/String;Z)Z
+.method public declared-synchronized tos_org_setWifiEnabled(Ljava/lang/String;Z)Z
     .locals 7
     .param p1, "callingPackage"    # Ljava/lang/String;
     .param p2, "enable"    # Z
@@ -4665,4 +4665,90 @@
     invoke-static {v0, v1}, Landroid/os/Binder;->restoreCallingIdentity(J)V
 
     throw v6
+.end method
+.method public declared-synchronized setWifiEnabled(Ljava/lang/String;Z)Z
+    .locals 5
+    .param p1, "enable"    # Z
+    .annotation build Landroid/annotation/TOSHook;
+        hooktype = .enum Landroid/annotation/TOSHook$TOSHookType;->CHANGE_METHOD:Landroid/annotation/TOSHook$TOSHookType;
+        note = "SetupFlashRom: permission part::tamrylei::2015-05-26"
+        romtype = .enum Landroid/annotation/TOSHook$TOSRomType;->ROM:Landroid/annotation/TOSHook$TOSRomType;
+    .end annotation
+
+    .prologue
+    const/4 v1, 0x0
+
+    .line 600
+    monitor-enter p0
+
+    :try_start_0
+    new-instance v0, Lcom/android/internal/os/TosPlugMethod$MethodPlugParam;
+
+    invoke-direct {v0}, Lcom/android/internal/os/TosPlugMethod$MethodPlugParam;-><init>()V
+
+    .line 601
+    .local v0, "param":Lcom/android/internal/os/TosPlugMethod$MethodPlugParam;
+    const/4 v2, 0x1
+
+    iput v2, v0, Lcom/android/internal/os/TosPlugMethod$MethodPlugParam;->invokeType:I
+
+    .line 602
+    iput-object p0, v0, Lcom/android/internal/os/TosPlugMethod$MethodPlugParam;->thisObject:Ljava/lang/Object;
+
+    .line 603
+    const/4 v2, 0x1
+
+    new-array v2, v2, [Ljava/lang/Object;
+
+    iput-object v2, v0, Lcom/android/internal/os/TosPlugMethod$MethodPlugParam;->args:[Ljava/lang/Object;
+
+    .line 604
+    iget-object v2, v0, Lcom/android/internal/os/TosPlugMethod$MethodPlugParam;->args:[Ljava/lang/Object;
+
+    const/4 v3, 0x0
+
+    invoke-static {p2}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
+
+    move-result-object v4
+
+    aput-object v4, v2, v3
+
+    .line 606
+    const-string v2, "com.android.server.wifi.WifiService#setWifiEnabled"
+
+    invoke-static {v2, v0}, Lcom/android/internal/os/TosModulesLoader;->invoke(Ljava/lang/String;Lcom/android/internal/os/TosPlugMethod$MethodPlugParam;)V
+
+    .line 607
+    invoke-virtual {v0}, Lcom/android/internal/os/TosPlugMethod$MethodPlugParam;->returnEarly()Z
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+
+    move-result v2
+
+    if-eqz v2, :cond_0
+
+    .line 610
+    :goto_0
+    monitor-exit p0
+
+    return v1
+
+    :cond_0
+    :try_start_1
+    invoke-virtual {p0, p1 ,p2}, Lcom/android/server/wifi/WifiService;->tos_org_setWifiEnabled(Ljava/lang/String;Z)Z
+    :try_end_1
+    .catchall {:try_start_1 .. :try_end_1} :catchall_0
+
+    move-result v1
+
+    goto :goto_0
+
+    .line 600
+    .end local v0    # "param":Lcom/android/internal/os/TosPlugMethod$MethodPlugParam;
+    :catchall_0
+    move-exception v1
+
+    monitor-exit p0
+
+    throw v1
 .end method

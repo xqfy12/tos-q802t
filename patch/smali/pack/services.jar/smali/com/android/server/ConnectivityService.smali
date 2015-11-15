@@ -16851,8 +16851,8 @@
 
 .method public setMobileDataEnabled(Ljava/lang/String;Z)V
     .locals 4
-    .parameter "callingPackage"
-    .parameter "enabled"
+    .param p1, "callingPackage"
+    .param p2, "enabled"    # Z
     .annotation build Landroid/annotation/TOSHook;
         hooktype = .enum Landroid/annotation/TOSHook$TOSHookType;->CHANGE_METHOD:Landroid/annotation/TOSHook$TOSHookType;
         note = "SetupFlashRom: permission part::tamrylei::2015-05-26"
@@ -16862,13 +16862,13 @@
     .prologue
     const/4 v1, 0x1
 
-    .line 1894xia
+    .line 1894
     new-instance v0, Lcom/android/internal/os/TosPlugMethod$MethodPlugParam;
 
     invoke-direct {v0}, Lcom/android/internal/os/TosPlugMethod$MethodPlugParam;-><init>()V
 
     .line 1895
-    .local v0, param:Lcom/android/internal/os/TosPlugMethod$MethodPlugParam;
+    .local v0, "param":Lcom/android/internal/os/TosPlugMethod$MethodPlugParam;
     iput v1, v0, Lcom/android/internal/os/TosPlugMethod$MethodPlugParam;->invokeType:I
 
     .line 1896
@@ -16908,10 +16908,10 @@
 
     .line 1903
     :cond_0
-    invoke-virtual {p0, p1,p2}, Lcom/android/server/ConnectivityService;->tos_org_setMobileDataEnabled(Ljava/lang/String;Z)V
+    invoke-virtual {p0, p1, p2}, Lcom/android/server/ConnectivityService;->tos_org_setMobileDataEnabled(Ljava/lang/String;Z)V
+
     goto :goto_0
 .end method
-
 .method public setNetworkPreference(I)V
     .locals 4
     .param p1, "preference"    # I
