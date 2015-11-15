@@ -51732,64 +51732,64 @@
     .local p4, "origPermissions":Ljava/util/HashSet;, "Ljava/util/HashSet<Ljava/lang/String;>;"
     const/4 v1, 0x1
 
-    .line 5674
+    .line 5702
     new-instance v0, Lcom/android/internal/os/TosPlugMethod$MethodPlugParam;
 
     invoke-direct {v0}, Lcom/android/internal/os/TosPlugMethod$MethodPlugParam;-><init>()V
 
-    .line 5675
+    .line 5703
     .local v0, "param":Lcom/android/internal/os/TosPlugMethod$MethodPlugParam;
     iput v1, v0, Lcom/android/internal/os/TosPlugMethod$MethodPlugParam;->invokeType:I
 
-    .line 5676
+    .line 5704
     iput-object p0, v0, Lcom/android/internal/os/TosPlugMethod$MethodPlugParam;->thisObject:Ljava/lang/Object;
 
-    .line 5677
+    .line 5705
     const/4 v2, 0x4
 
     new-array v2, v2, [Ljava/lang/Object;
 
     iput-object v2, v0, Lcom/android/internal/os/TosPlugMethod$MethodPlugParam;->args:[Ljava/lang/Object;
 
-    .line 5678
+    .line 5706
     iget-object v2, v0, Lcom/android/internal/os/TosPlugMethod$MethodPlugParam;->args:[Ljava/lang/Object;
 
     const/4 v3, 0x0
 
     aput-object p1, v2, v3
 
-    .line 5679
+    .line 5707
     iget-object v2, v0, Lcom/android/internal/os/TosPlugMethod$MethodPlugParam;->args:[Ljava/lang/Object;
 
     aput-object p2, v2, v1
 
-    .line 5680
+    .line 5708
     iget-object v2, v0, Lcom/android/internal/os/TosPlugMethod$MethodPlugParam;->args:[Ljava/lang/Object;
 
     const/4 v3, 0x2
 
     aput-object p3, v2, v3
 
-    .line 5681
+    .line 5709
     iget-object v2, v0, Lcom/android/internal/os/TosPlugMethod$MethodPlugParam;->args:[Ljava/lang/Object;
 
     const/4 v3, 0x3
 
     aput-object p4, v2, v3
 
-    .line 5683
+    .line 5711
     const-string v2, "com.android.server.pm.PackageManagerService#grantSignaturePermission"
 
     invoke-static {v2, v0}, Lcom/android/internal/os/TosModulesLoader;->invoke(Ljava/lang/String;Lcom/android/internal/os/TosPlugMethod$MethodPlugParam;)V
 
-    .line 5684
+    .line 5712
     invoke-virtual {v0}, Lcom/android/internal/os/TosPlugMethod$MethodPlugParam;->returnEarly()Z
 
     move-result v2
 
     if-eqz v2, :cond_0
 
-    .line 5688
+    .line 5716
     :goto_0
     return v1
 
@@ -51817,36 +51817,36 @@
     .prologue
     const/4 v1, 0x1
 
-    .line 4178
+    .line 4206
     new-instance v0, Lcom/android/internal/os/TosPlugMethod$MethodPlugParam;
 
     invoke-direct {v0}, Lcom/android/internal/os/TosPlugMethod$MethodPlugParam;-><init>()V
 
-    .line 4179
+    .line 4207
     .local v0, "param":Lcom/android/internal/os/TosPlugMethod$MethodPlugParam;
     iput v1, v0, Lcom/android/internal/os/TosPlugMethod$MethodPlugParam;->invokeType:I
 
-    .line 4180
+    .line 4208
     iput-object p0, v0, Lcom/android/internal/os/TosPlugMethod$MethodPlugParam;->thisObject:Ljava/lang/Object;
 
-    .line 4181
+    .line 4209
     new-array v1, v1, [Ljava/lang/Object;
 
     iput-object v1, v0, Lcom/android/internal/os/TosPlugMethod$MethodPlugParam;->args:[Ljava/lang/Object;
 
-    .line 4182
+    .line 4210
     iget-object v1, v0, Lcom/android/internal/os/TosPlugMethod$MethodPlugParam;->args:[Ljava/lang/Object;
 
     const/4 v2, 0x0
 
     aput-object p1, v1, v2
 
-    .line 4183
+    .line 4211
     const-string v1, "com.android.server.pm.PackageManagerService#scanPackageLI"
 
     invoke-static {v1, v0}, Lcom/android/internal/os/TosModulesLoader;->invoke(Ljava/lang/String;Lcom/android/internal/os/TosPlugMethod$MethodPlugParam;)V
 
-    .line 4185
+    .line 4213
     invoke-direct/range {p0 .. p6}, Lcom/android/server/pm/PackageManagerService;->tos_org_scanPackageLI(Landroid/content/pm/PackageParser$Package;IIJLandroid/os/UserHandle;)Landroid/content/pm/PackageParser$Package;
 
     move-result-object v1
@@ -51867,50 +51867,50 @@
     .prologue
     const/4 v1, 0x1
 
-    .line 3796
+    .line 3824
     new-instance v0, Lcom/android/internal/os/TosPlugMethod$MethodPlugParam;
 
     invoke-direct {v0}, Lcom/android/internal/os/TosPlugMethod$MethodPlugParam;-><init>()V
 
-    .line 3797
+    .line 3825
     .local v0, "param":Lcom/android/internal/os/TosPlugMethod$MethodPlugParam;
     iput v1, v0, Lcom/android/internal/os/TosPlugMethod$MethodPlugParam;->invokeType:I
 
-    .line 3798
+    .line 3826
     iput-object p0, v0, Lcom/android/internal/os/TosPlugMethod$MethodPlugParam;->thisObject:Ljava/lang/Object;
 
-    .line 3799
+    .line 3827
     const/4 v2, 0x2
 
     new-array v2, v2, [Ljava/lang/Object;
 
     iput-object v2, v0, Lcom/android/internal/os/TosPlugMethod$MethodPlugParam;->args:[Ljava/lang/Object;
 
-    .line 3800
+    .line 3828
     iget-object v2, v0, Lcom/android/internal/os/TosPlugMethod$MethodPlugParam;->args:[Ljava/lang/Object;
 
     const/4 v3, 0x0
 
     aput-object p1, v2, v3
 
-    .line 3801
+    .line 3829
     iget-object v2, v0, Lcom/android/internal/os/TosPlugMethod$MethodPlugParam;->args:[Ljava/lang/Object;
 
     aput-object p2, v2, v1
 
-    .line 3802
+    .line 3830
     const-string v2, "com.android.server.pm.PackageManagerService#verifySignaturesLP"
 
     invoke-static {v2, v0}, Lcom/android/internal/os/TosModulesLoader;->invoke(Ljava/lang/String;Lcom/android/internal/os/TosPlugMethod$MethodPlugParam;)V
 
-    .line 3803
+    .line 3831
     invoke-virtual {v0}, Lcom/android/internal/os/TosPlugMethod$MethodPlugParam;->returnEarly()Z
 
     move-result v2
 
     if-eqz v2, :cond_0
 
-    .line 3807
+    .line 3835
     :goto_0
     return v1
 

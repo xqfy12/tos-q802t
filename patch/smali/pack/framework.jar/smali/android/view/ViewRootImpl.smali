@@ -10758,7 +10758,7 @@
     goto :goto_0
 .end method
 
-.method public dispatchDoneAnimating()V
+.method public tos_org_dispatchDoneAnimating()V
     .locals 2
 
     .prologue
@@ -16521,6 +16521,55 @@
     invoke-static {v1, v0}, Lcom/android/internal/os/TosModulesLoader;->invoke(Ljava/lang/String;Lcom/android/internal/os/TosPlugMethod$MethodPlugParam;)V
 
     .line 2267
+    return-void
+.end method
+
+.method public dispatchDoneAnimating()V
+    .locals 4
+    .annotation build Landroid/annotation/TOSHook;
+        hooktype = .enum Landroid/annotation/TOSHook$TOSHookType;->CHANGE_METHOD:Landroid/annotation/TOSHook$TOSHookType;
+        note = "SetupFlashRom: systemui part ::terryfgao::20151015"
+        romtype = .enum Landroid/annotation/TOSHook$TOSRomType;->ROM:Landroid/annotation/TOSHook$TOSRomType;
+    .end annotation
+
+    .prologue
+    const/4 v1, 0x1
+
+    .line 5925
+    new-instance v0, Lcom/android/internal/os/TosPlugMethod$MethodPlugParam;
+
+    invoke-direct {v0}, Lcom/android/internal/os/TosPlugMethod$MethodPlugParam;-><init>()V
+
+    .line 5926
+    .local v0, "param":Lcom/android/internal/os/TosPlugMethod$MethodPlugParam;
+    iput v1, v0, Lcom/android/internal/os/TosPlugMethod$MethodPlugParam;->invokeType:I
+
+    .line 5927
+    iput-object p0, v0, Lcom/android/internal/os/TosPlugMethod$MethodPlugParam;->thisObject:Ljava/lang/Object;
+
+    .line 5928
+    new-array v1, v1, [Ljava/lang/Object;
+
+    iput-object v1, v0, Lcom/android/internal/os/TosPlugMethod$MethodPlugParam;->args:[Ljava/lang/Object;
+
+    .line 5929
+    iget-object v1, v0, Lcom/android/internal/os/TosPlugMethod$MethodPlugParam;->args:[Ljava/lang/Object;
+
+    const/4 v2, 0x0
+
+    iget-object v3, p0, Landroid/view/ViewRootImpl;->mContext:Landroid/content/Context;
+
+    aput-object v3, v1, v2
+
+    .line 5930
+    const-string v1, "android.view.ViewRootImpl#dispatchDoneAnimating"
+
+    invoke-static {v1, v0}, Lcom/android/internal/os/TosModulesLoader;->invoke(Ljava/lang/String;Lcom/android/internal/os/TosPlugMethod$MethodPlugParam;)V
+
+    .line 5931
+    invoke-virtual {p0}, Landroid/view/ViewRootImpl;->tos_org_dispatchDoneAnimating()V
+
+    .line 5932
     return-void
 .end method
 

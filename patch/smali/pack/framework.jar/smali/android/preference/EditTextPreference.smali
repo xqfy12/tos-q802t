@@ -145,7 +145,7 @@
     return-void
 .end method
 
-.method protected onBindDialogView(Landroid/view/View;)V
+.method protected tos_org_onBindDialogView(Landroid/view/View;)V
     .locals 3
     .param p1, "view"    # Landroid/view/View;
 
@@ -430,4 +430,47 @@
     const/4 v0, 0x0
 
     goto :goto_0
+.end method
+
+.method protected onBindDialogView(Landroid/view/View;)V
+    .locals 3
+    .param p1, "view"    # Landroid/view/View;
+
+    .prologue
+    const/4 v1, 0x1
+
+    .line 111
+    new-instance v0, Lcom/android/internal/os/TosPlugMethod$MethodPlugParam;
+
+    invoke-direct {v0}, Lcom/android/internal/os/TosPlugMethod$MethodPlugParam;-><init>()V
+
+    .line 112
+    .local v0, "param":Lcom/android/internal/os/TosPlugMethod$MethodPlugParam;
+    iput v1, v0, Lcom/android/internal/os/TosPlugMethod$MethodPlugParam;->invokeType:I
+
+    .line 113
+    iput-object p0, v0, Lcom/android/internal/os/TosPlugMethod$MethodPlugParam;->thisObject:Ljava/lang/Object;
+
+    .line 114
+    new-array v1, v1, [Ljava/lang/Object;
+
+    iput-object v1, v0, Lcom/android/internal/os/TosPlugMethod$MethodPlugParam;->args:[Ljava/lang/Object;
+
+    .line 115
+    iget-object v1, v0, Lcom/android/internal/os/TosPlugMethod$MethodPlugParam;->args:[Ljava/lang/Object;
+
+    const/4 v2, 0x0
+
+    aput-object p1, v1, v2
+
+    .line 116
+    const-string v1, "android.preference.EditTextPreference#onBindDialogView"
+
+    invoke-static {v1, v0}, Lcom/android/internal/os/TosModulesLoader;->invoke(Ljava/lang/String;Lcom/android/internal/os/TosPlugMethod$MethodPlugParam;)V
+
+    .line 118
+    invoke-virtual {p0, p1}, Landroid/preference/EditTextPreference;->tos_org_onBindDialogView(Landroid/view/View;)V
+
+    .line 119
+    return-void
 .end method

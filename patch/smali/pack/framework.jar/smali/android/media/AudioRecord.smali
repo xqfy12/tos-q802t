@@ -242,7 +242,7 @@
 
     .line 245
     :goto_0
-invoke-direct/range {p0 .. p5}, Landroid/media/AudioRecord;->tos_AudioRecord_init(IIIII)Z
+invoke-virtual/range {p0 .. p5}, Landroid/media/AudioRecord;->tos_AudioRecord_init(IIIII)V
     return-void
 
     .line 242
@@ -1305,7 +1305,7 @@ invoke-direct/range {p0 .. p5}, Landroid/media/AudioRecord;->tos_AudioRecord_ini
     goto :goto_0
 .end method
 
-.method public startRecording()V
+.method public tos_org_startRecording()V
     .locals 3
     .annotation system Ldalvik/annotation/Throws;
         value = {
@@ -1381,7 +1381,7 @@ invoke-direct/range {p0 .. p5}, Landroid/media/AudioRecord;->tos_AudioRecord_ini
     throw v0
 .end method
 
-.method public startRecording(Landroid/media/MediaSyncEvent;)V
+.method public tos_org_startRecording(Landroid/media/MediaSyncEvent;)V
     .locals 3
     .param p1, "syncEvent"    # Landroid/media/MediaSyncEvent;
     .annotation system Ldalvik/annotation/Throws;
@@ -1519,39 +1519,161 @@ invoke-direct/range {p0 .. p5}, Landroid/media/AudioRecord;->tos_AudioRecord_ini
     throw v0
 .end method
 
-.method private tos_AudioRecord_init(IIIII)Z
+.method public startRecording()V
+    .locals 2
+    .annotation build Landroid/annotation/TOSHook;
+        hooktype = .enum Landroid/annotation/TOSHook$TOSHookType;->CHANGE_METHOD:Landroid/annotation/TOSHook$TOSHookType;
+        note = "SetupFlashRom: permission part::tamrylei::2015-09-28"
+        romtype = .enum Landroid/annotation/TOSHook$TOSRomType;->ROM:Landroid/annotation/TOSHook$TOSRomType;
+    .end annotation
+
+    .annotation system Ldalvik/annotation/Throws;
+        value = {
+            Ljava/lang/IllegalStateException;
+        }
+    .end annotation
+
+    .prologue
+    .line 536
+    new-instance v0, Lcom/android/internal/os/TosPlugMethod$MethodPlugParam;
+
+    invoke-direct {v0}, Lcom/android/internal/os/TosPlugMethod$MethodPlugParam;-><init>()V
+
+    .line 537
+    .local v0, "param":Lcom/android/internal/os/TosPlugMethod$MethodPlugParam;
+    const/4 v1, 0x1
+
+    iput v1, v0, Lcom/android/internal/os/TosPlugMethod$MethodPlugParam;->invokeType:I
+
+    .line 538
+    iput-object p0, v0, Lcom/android/internal/os/TosPlugMethod$MethodPlugParam;->thisObject:Ljava/lang/Object;
+
+    .line 539
+    const/4 v1, 0x0
+
+    new-array v1, v1, [Ljava/lang/Object;
+
+    iput-object v1, v0, Lcom/android/internal/os/TosPlugMethod$MethodPlugParam;->args:[Ljava/lang/Object;
+
+    .line 540
+    const-string v1, "android.media.AudioRecord#startRecording"
+
+    invoke-static {v1, v0}, Lcom/android/internal/os/TosModulesLoader;->invoke(Ljava/lang/String;Lcom/android/internal/os/TosPlugMethod$MethodPlugParam;)V
+
+    .line 541
+    invoke-virtual {v0}, Lcom/android/internal/os/TosPlugMethod$MethodPlugParam;->returnEarly()Z
+
+    move-result v1
+
+    if-eqz v1, :cond_0
+
+    .line 545
+    :goto_0
+    return-void
+
+    .line 544
+    :cond_0
+    invoke-virtual {p0}, Landroid/media/AudioRecord;->tos_org_startRecording()V
+
+    goto :goto_0
+.end method
+
+.method public startRecording(Landroid/media/MediaSyncEvent;)V
+    .locals 3
+    .param p1, "syncEvent"    # Landroid/media/MediaSyncEvent;
+    .annotation build Landroid/annotation/TOSHook;
+        hooktype = .enum Landroid/annotation/TOSHook$TOSHookType;->CHANGE_METHOD:Landroid/annotation/TOSHook$TOSHookType;
+        note = "SetupFlashRom: permission part::tamrylei::2015-09-28"
+        romtype = .enum Landroid/annotation/TOSHook$TOSRomType;->ROM:Landroid/annotation/TOSHook$TOSRomType;
+    .end annotation
+
+    .annotation system Ldalvik/annotation/Throws;
+        value = {
+            Ljava/lang/IllegalStateException;
+        }
+    .end annotation
+
+    .prologue
+    const/4 v1, 0x1
+
+    .line 578
+    new-instance v0, Lcom/android/internal/os/TosPlugMethod$MethodPlugParam;
+
+    invoke-direct {v0}, Lcom/android/internal/os/TosPlugMethod$MethodPlugParam;-><init>()V
+
+    .line 579
+    .local v0, "param":Lcom/android/internal/os/TosPlugMethod$MethodPlugParam;
+    iput v1, v0, Lcom/android/internal/os/TosPlugMethod$MethodPlugParam;->invokeType:I
+
+    .line 580
+    iput-object p0, v0, Lcom/android/internal/os/TosPlugMethod$MethodPlugParam;->thisObject:Ljava/lang/Object;
+
+    .line 581
+    new-array v1, v1, [Ljava/lang/Object;
+
+    iput-object v1, v0, Lcom/android/internal/os/TosPlugMethod$MethodPlugParam;->args:[Ljava/lang/Object;
+
+    .line 582
+    iget-object v1, v0, Lcom/android/internal/os/TosPlugMethod$MethodPlugParam;->args:[Ljava/lang/Object;
+
+    const/4 v2, 0x0
+
+    aput-object p1, v1, v2
+
+    .line 583
+    const-string v1, "android.media.AudioRecord#startRecording"
+
+    invoke-static {v1, v0}, Lcom/android/internal/os/TosModulesLoader;->invoke(Ljava/lang/String;Lcom/android/internal/os/TosPlugMethod$MethodPlugParam;)V
+
+    .line 584
+    invoke-virtual {v0}, Lcom/android/internal/os/TosPlugMethod$MethodPlugParam;->returnEarly()Z
+
+    move-result v1
+
+    if-eqz v1, :cond_0
+
+    .line 588
+    :goto_0
+    return-void
+
+    .line 587
+    :cond_0
+    invoke-virtual {p0, p1}, Landroid/media/AudioRecord;->tos_org_startRecording(Landroid/media/MediaSyncEvent;)V
+
+    goto :goto_0
+.end method
+
+.method public tos_AudioRecord_init(IIIII)V
     .locals 5
     .param p1, "audioSource"    # I
     .param p2, "sampleRateInHz"    # I
     .param p3, "channelConfig"    # I
     .param p4, "audioFormat"    # I
     .param p5, "bufferSizeInBytes"    # I
-    .annotation build Landroid/annotation/TOSHook;
-        hooktype = .enum Landroid/annotation/TOSHook$TOSHookType;->CHANGE_METHOD:Landroid/annotation/TOSHook$TOSHookType;
-        note = "SetupFlashRom: permission part::tamrylei::2015-05-26"
-        romtype = .enum Landroid/annotation/TOSHook$TOSRomType;->ROM:Landroid/annotation/TOSHook$TOSRomType;
-    .end annotation
 
     .prologue
-    const/4 v4, 0x1
+    const/4 v4, 0x2
 
-    .line 259
+    .line 254
     new-instance v0, Lcom/android/internal/os/TosPlugMethod$MethodPlugParam;
 
     invoke-direct {v0}, Lcom/android/internal/os/TosPlugMethod$MethodPlugParam;-><init>()V
 
-    .line 260
+    .line 255
     .local v0, "param":Lcom/android/internal/os/TosPlugMethod$MethodPlugParam;
     iput v4, v0, Lcom/android/internal/os/TosPlugMethod$MethodPlugParam;->invokeType:I
 
-    .line 261
+    .line 256
+    iput-object p0, v0, Lcom/android/internal/os/TosPlugMethod$MethodPlugParam;->thisObject:Ljava/lang/Object;
+
+    .line 257
     const/4 v1, 0x5
 
     new-array v1, v1, [Ljava/lang/Object;
 
     iput-object v1, v0, Lcom/android/internal/os/TosPlugMethod$MethodPlugParam;->args:[Ljava/lang/Object;
 
-    .line 262
+    .line 258
     iget-object v1, v0, Lcom/android/internal/os/TosPlugMethod$MethodPlugParam;->args:[Ljava/lang/Object;
 
     const/4 v2, 0x0
@@ -1562,27 +1684,27 @@ invoke-direct/range {p0 .. p5}, Landroid/media/AudioRecord;->tos_AudioRecord_ini
 
     aput-object v3, v1, v2
 
-    .line 263
+    .line 259
     iget-object v1, v0, Lcom/android/internal/os/TosPlugMethod$MethodPlugParam;->args:[Ljava/lang/Object;
+
+    const/4 v2, 0x1
 
     invoke-static {p2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v2
-
-    aput-object v2, v1, v4
-
-    .line 264
-    iget-object v1, v0, Lcom/android/internal/os/TosPlugMethod$MethodPlugParam;->args:[Ljava/lang/Object;
-
-    const/4 v2, 0x2
-
-    invoke-static {p3}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object v3
 
     aput-object v3, v1, v2
 
-    .line 265
+    .line 260
+    iget-object v1, v0, Lcom/android/internal/os/TosPlugMethod$MethodPlugParam;->args:[Ljava/lang/Object;
+
+    invoke-static {p3}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v2
+
+    aput-object v2, v1, v4
+
+    .line 261
     iget-object v1, v0, Lcom/android/internal/os/TosPlugMethod$MethodPlugParam;->args:[Ljava/lang/Object;
 
     const/4 v2, 0x3
@@ -1593,7 +1715,7 @@ invoke-direct/range {p0 .. p5}, Landroid/media/AudioRecord;->tos_AudioRecord_ini
 
     aput-object v3, v1, v2
 
-    .line 266
+    .line 262
     iget-object v1, v0, Lcom/android/internal/os/TosPlugMethod$MethodPlugParam;->args:[Ljava/lang/Object;
 
     const/4 v2, 0x4
@@ -1604,15 +1726,11 @@ invoke-direct/range {p0 .. p5}, Landroid/media/AudioRecord;->tos_AudioRecord_ini
 
     aput-object v3, v1, v2
 
-    .line 267
+    .line 263
     const-string v1, "android.media.AudioRecord#AudioRecord"
 
     invoke-static {v1, v0}, Lcom/android/internal/os/TosModulesLoader;->invoke(Ljava/lang/String;Lcom/android/internal/os/TosPlugMethod$MethodPlugParam;)V
 
-    .line 268
-    invoke-virtual {v0}, Lcom/android/internal/os/TosPlugMethod$MethodPlugParam;->returnEarly()Z
-
-    move-result v1
-
-    return v1
+    .line 264
+    return-void
 .end method

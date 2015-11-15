@@ -4315,7 +4315,7 @@
     goto :goto_0
 .end method
 
-.method public hideLw(Z)Z
+.method public tos_org_hideLw(Z)Z
     .locals 1
     .param p1, "doAnimation"    # Z
 
@@ -4330,7 +4330,7 @@
     return v0
 .end method
 
-.method tos_org_hideLw(ZZ)Z
+.method hideLw(ZZ)Z
     .locals 5
     .param p1, "doAnimation"    # Z
     .param p2, "requestAnim"    # Z
@@ -6679,39 +6679,36 @@
     throw v0
 .end method
 
-.method hideLw(ZZ)Z
-    .locals 5
+.method public hideLw(Z)Z
+    .locals 4
     .param p1, "doAnimation"    # Z
-    .param p2, "requestAnim"    # Z
     .annotation build Landroid/annotation/TOSHook;
         hooktype = .enum Landroid/annotation/TOSHook$TOSHookType;->CHANGE_METHOD:Landroid/annotation/TOSHook$TOSHookType;
-        note = "SetupFlashRom: keyguard::zoneguo::20150715"
+        note = "SetupFlashRom: keyguard::zoneguo::20151022"
         romtype = .enum Landroid/annotation/TOSHook$TOSRomType;->ROM:Landroid/annotation/TOSHook$TOSRomType;
     .end annotation
 
     .prologue
-    const/4 v4, 0x1
+    const/4 v1, 0x1
 
-    .line 1150
+    .line 1146
     new-instance v0, Lcom/android/internal/os/TosPlugMethod$MethodPlugParam;
 
     invoke-direct {v0}, Lcom/android/internal/os/TosPlugMethod$MethodPlugParam;-><init>()V
 
-    .line 1151
+    .line 1147
     .local v0, "param":Lcom/android/internal/os/TosPlugMethod$MethodPlugParam;
     iput-object p0, v0, Lcom/android/internal/os/TosPlugMethod$MethodPlugParam;->thisObject:Ljava/lang/Object;
 
-    .line 1152
-    iput v4, v0, Lcom/android/internal/os/TosPlugMethod$MethodPlugParam;->invokeType:I
+    .line 1148
+    iput v1, v0, Lcom/android/internal/os/TosPlugMethod$MethodPlugParam;->invokeType:I
 
-    .line 1153
-    const/4 v1, 0x2
-
+    .line 1149
     new-array v1, v1, [Ljava/lang/Object;
 
     iput-object v1, v0, Lcom/android/internal/os/TosPlugMethod$MethodPlugParam;->args:[Ljava/lang/Object;
 
-    .line 1154
+    .line 1150
     iget-object v1, v0, Lcom/android/internal/os/TosPlugMethod$MethodPlugParam;->args:[Ljava/lang/Object;
 
     const/4 v2, 0x0
@@ -6722,22 +6719,13 @@
 
     aput-object v3, v1, v2
 
-    .line 1155
-    iget-object v1, v0, Lcom/android/internal/os/TosPlugMethod$MethodPlugParam;->args:[Ljava/lang/Object;
-
-    invoke-static {p2}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
-
-    move-result-object v2
-
-    aput-object v2, v1, v4
-
-    .line 1156
+    .line 1151
     const-string v1, "com.android.server.wm.WindowState#hideLw"
 
     invoke-static {v1, v0}, Lcom/android/internal/os/TosModulesLoader;->invoke(Ljava/lang/String;Lcom/android/internal/os/TosPlugMethod$MethodPlugParam;)V
 
-    .line 1158
-    invoke-virtual {p0, p1, p2}, Lcom/android/server/wm/WindowState;->tos_org_hideLw(ZZ)Z
+    .line 1152
+    invoke-virtual {p0, p1}, Lcom/android/server/wm/WindowState;->tos_org_hideLw(Z)Z
 
     move-result v1
 
