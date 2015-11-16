@@ -23,9 +23,9 @@ ro.product.locale.region=US
 ro.wifi.channels=
 ro.board.platform=msm8226
 # ro.build.product is obsolete; use ro.product.device
-ro.build.product=msm8226
+ro.build.product=P826T30
 ro.product.model=ZTE Q802T
-ro.product.device=msm8226
+ro.product.device=P826T30
 # Do not try to parse ro.build.description or .fingerprint
 ro.build.description=msm8226-userdebug 4.4.4 KTU84Q eng.weipan.20150513.111112 test-keys
 ro.build.fingerprint=qcom/msm8226/msm8226:4.4.4/KTU84Q/eng.weipan.20150513.111112:userdebug/test-keys
