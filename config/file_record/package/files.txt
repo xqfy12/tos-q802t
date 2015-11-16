@@ -701,7 +701,7 @@ target_files/SYSTEM/fonts/RobotoCondensed-Regular.ttf|03eeb5d57a1737c59a35d583b2
 target_files/SYSTEM/fonts/qromnotolight.ttf|8e6cfe94172ac67b8f216baa023bd7a5
 target_files/SYSTEM/fonts/qromnotothin.ttf|2155a1dbca90aa5eca116f922de77ec8
 target_files/SYSTEM/framework/am.jar|9916be60d5d4638cd6ada0b8f1d68c04
-target_files/SYSTEM/framework/android.policy.jar|9f42a0797a2d17a89f4798be658b9855
+target_files/SYSTEM/framework/android.policy.jar|8ae3ff377b691a794a88db4178a5c3f7
 target_files/SYSTEM/framework/android.test.runner.jar|b9ae8200138307c7d847eeb690cb6871
 target_files/SYSTEM/framework/apache-xml.jar|db47ce6639672c8131e9eb18b8dce23e
 target_files/SYSTEM/framework/bmgr.jar|17a0d8a9a780751d728f265d473af9dc
@@ -719,11 +719,11 @@ target_files/SYSTEM/framework/core-junit.jar|62ccfeb113a0f92ce3a6f0a489e6f42c
 target_files/SYSTEM/framework/core-libart.jar|a71a44e7fb80f2c159c3ec4d18ad1a29
 target_files/SYSTEM/framework/core.jar|bf10d8c39a7925ff4cf77e7ce7b7bf5d
 target_files/SYSTEM/framework/embmslibrary.jar|3836c101abaa727d4105bfeb467a48e2
-target_files/SYSTEM/framework/ext.jar|95aad4f37486ed7336f890cee62cee53
+target_files/SYSTEM/framework/ext.jar|78943c0c77011fa49ae4196fbad2a373
 target_files/SYSTEM/framework/framework-res.apk|336e705796ee97ac20a99cc199f5f9ca
-target_files/SYSTEM/framework/framework-zte-res.apk|52f7daed2dec234abe9db773580f54f8
-target_files/SYSTEM/framework/framework.jar|d1bdcc787bfa6bad518b77dde4680186
-target_files/SYSTEM/framework/framework2.jar|27367466a2fbc906606e662e24433fd3
+target_files/SYSTEM/framework/framework-zte-res.apk|5362b4c1288036d0d894863bcb863a12
+target_files/SYSTEM/framework/framework.jar|fa9cc6ac682649a2672ab4b4338bf69e
+target_files/SYSTEM/framework/framework2.jar|e10a557adc0f13deac54eb40adbe2fda
 target_files/SYSTEM/framework/ime.jar|73077f6e16e2a34886f410fab7c93dc4
 target_files/SYSTEM/framework/input.jar|8e6e1e9d6c4c566bbfa8a91b89d24c13
 target_files/SYSTEM/framework/IZTESecurity.jar|247d6a94585a44d071425b3ac0500900
@@ -741,10 +741,10 @@ target_files/SYSTEM/framework/qcrilhook.jar|5894d14d5c004e3c7edad973703b0b1f
 target_files/SYSTEM/framework/qmapbridge.jar|52f38d5e48e464b267d004d6dceb0140
 target_files/SYSTEM/framework/rcsimssettings.jar|72c07a26c4926fb5dd34636905fb913a
 target_files/SYSTEM/framework/requestsync.jar|9ca8df17eb02f140fcdd207090c01e05
-target_files/SYSTEM/framework/services.jar|d54ff2e08eff534c74778008f8c40d54
+target_files/SYSTEM/framework/services.jar|f3c27bafaec522859544952117ec82f8
 target_files/SYSTEM/framework/settings.jar|436bec0216e2066f85551d88fb4e2ac7
 target_files/SYSTEM/framework/svc.jar|8a1471162fa0cbc8839496f389658d4d
-target_files/SYSTEM/framework/telephony-common.jar|76d31cc84c83b63dfa70c630fc738f80
+target_files/SYSTEM/framework/telephony-common.jar|67be3faf8e4f1302a7faecc1a5b00cb5
 target_files/SYSTEM/framework/telephony-msim.jar|e0b6caf61470d5b0b367282fa759fd3d
 target_files/SYSTEM/framework/uiautomator.jar|11fa532819fdc9881debb0f2361af61e
 target_files/SYSTEM/framework/videocallapi.jar|c22757e19751f9c43e99dd19c126292e
@@ -2686,7 +2686,7 @@ target_files/SYSTEM/xbin/tcpdump|077e5ebd6f998632d1dfa507d8502879
 target_files/SYSTEM/xbin/unrar|df49a297d38b5e715c88d8a220ad7e03
 target_files/SYSTEM/xbin/vim|34565c03ec0cd30d3a02146377a220fe
 target_files/SYSTEM/xbin/zip|1d6dcf0c905da70aaa36616c15a8cd12
-target_files.zip|16ed515efc6378a8479d3605b239c045
+target_files.zip|ef97ede36f0550e50232c24b1d9fdf19
 target_files/META/apkcerts.txt|49644c7b288bc8f985ce317e03939080
 target_files/META/filesystem_config.txt|6200feda31e0ad69cf492f60473c9c9c
 target_files/META/linkinfo.txt|c9fc7e14a327a3d825fcf4572d96091f
@@ -2780,4 +2780,4 @@ target_files/SYSTEM/bin/backuptool.functions|e07c07bff9b3a57c7de92e407d8cfc73
 target_files/SYSTEM/lib/libmp3lame.so|d79a201536ee581e07203ada26b3cd63
 target_files/SYSTEM/priv-app/qrecorder.apk|7cba0ac7fe0a5b00a02871871a850d11
 target_files/BOOTABLE_IMAGES/boot.img|007bfede220e19e8b95a768477476b8d
-q802t.zip|2d8748bf058ad6557877804ce42356bd
+q802t.zip|8d7b627870a9488deec8a4999ef2298a

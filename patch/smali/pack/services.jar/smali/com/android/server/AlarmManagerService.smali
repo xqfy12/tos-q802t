@@ -5638,7 +5638,7 @@ invoke-virtual {p0}, Lcom/android/server/AlarmManagerService;->tos_AlarmManagerS
 
     move-object/from16 v10, p9
 
-    invoke-virtual/range {v0 .. v10}, Lcom/android/server/AlarmManagerService;->setzte(IJJJLandroid/app/PendingIntent;ZLandroid/os/WorkSource;)V
+    invoke-virtual/range {v0 .. v10}, Lcom/android/server/AlarmManagerService;->set(IJJJLandroid/app/PendingIntent;ZLandroid/os/WorkSource;)V
 
     .line 621
     return-void
