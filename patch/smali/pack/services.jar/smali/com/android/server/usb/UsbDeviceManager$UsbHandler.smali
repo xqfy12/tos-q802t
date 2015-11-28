@@ -1040,7 +1040,7 @@
 
     .line 838
     .local v12, "title":Ljava/lang/CharSequence;
-    const v0, 0x1040575
+    const v0, 0x1040570
 
     invoke-virtual {v11, v0}, Landroid/content/res/Resources;->getText(I)Ljava/lang/CharSequence;
 
@@ -1052,7 +1052,7 @@
 
     const-string v1, "com.android.settings"
 
-    const-string v3, "com.android.settings.DevelopmentSettings"
+    const-string v3, "com.android.settings.UsbSettings"
 
     invoke-direct {v0, v1, v3}, Landroid/content/ComponentName;-><init>(Ljava/lang/String;Ljava/lang/String;)V
 
@@ -1248,7 +1248,7 @@
     if-eqz v13, :cond_9
 
     .line 824
-    const v6, 0x1040574
+    const v6, 0x104056c
 
     .restart local v6    # "id":I
     goto/16 :goto_3

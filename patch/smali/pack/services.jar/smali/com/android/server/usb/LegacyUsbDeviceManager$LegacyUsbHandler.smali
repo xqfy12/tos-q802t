@@ -1096,7 +1096,7 @@
 
     const-string v8, "com.android.settings"
 
-    const-string v9, "com.android.settings.DevelopmentSettings"
+    const-string v9, "com.android.settings.UsbSettings"
 
     invoke-direct {v7, v8, v9}, Landroid/content/ComponentName;-><init>(Ljava/lang/String;Ljava/lang/String;)V
 
