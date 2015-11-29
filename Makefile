@@ -8,13 +8,13 @@ DEVICE_NAME := q802t
 SW_VERSION := msm8226-userdebug 4.4.4 KTU84Q eng.weipan.20150513.111112 test-keys
 
 # packages need to be decompiled
-DECOMPILE_PACKAGES := framework.jar services.jar android.policy.jar framework2.jar telephony-common.jar ext.jar
+DECOMPILE_PACKAGES := framework.jar services.jar android.policy.jar framework2.jar telephony-common.jar ext.jar framework-qrom.jar
 
 # custom resource package
-CUSTOM_RESOURCE_PACKAGE := framework-zte-res.apk
+CUSTOM_RESOURCE_PACKAGE := ramework-qrom-res.apk framework-zte-res.apk
 
 # extra packages need to be decompiled
-#EXTRA_DECOMPILE_PACKAGES := TOS:qgallery.apk TARGET:Camera2.apk
+#EXTRA_DECOMPILE_PACKAGES := TOS:qgallery.apk TARGET:Camera2.apk framework-qrom.jar
 
 # unpack boot.img tool
 # support relative path & variables
@@ -41,4 +41,20 @@ BAKSMALI_JAR := default
 # e.g. $(PORT_TOOLS)/android/aapt
 AAPT_PATH := default
 
+##############################################################################
+# The value is used to config the device's resolution.
+# such as 1280x720, 1920x1080
+#-----------------------------------------------------------------------------
+RESOLUTION :=1280x720
+
+##############################################################################
+# The value is used to config whether to append device assertions to update_script
+# such as true, false.
+#-----------------------------------------------------------------------------
+RECOVERY_DEVICE_ASSERT=false
+
+##############################################################################
+# The value is used to config the apps that should be modified 
+#-----------------------------------------------------------------------------
+#TOS_CUSTOM_APPS:=qphone qsystemui
 include $(PORT_BUILD)/main.mk
