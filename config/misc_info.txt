@@ -11,3 +11,4 @@ system_size=2254438400
 userdata_size=12738101428
 cache_size=108174080
 selinux_fc=BOOT/RAMDISK/file_contexts
+recovery_device_assert=false

@@ -970,6 +970,7 @@
     invoke-virtual {p0}, Landroid/view/ViewRootImpl;->loadSystemProperties()V
 
     .line 382
+invoke-virtual/range {p0 .. p1}, Landroid/view/ViewRootImpl;->tos_ViewRootImpl_init(Landroid/content/Context;)V
     return-void
 
     .end local v7    # "powerManager":Landroid/os/PowerManager;
@@ -14761,7 +14762,7 @@
     return-void
 .end method
 
-.method public setView(Landroid/view/View;Landroid/view/WindowManager$LayoutParams;Landroid/view/View;)V
+.method public tos_org_setView(Landroid/view/View;Landroid/view/WindowManager$LayoutParams;Landroid/view/View;)V
     .locals 23
     .param p1, "view"    # Landroid/view/View;
     .param p2, "attrs"    # Landroid/view/WindowManager$LayoutParams;
@@ -16424,26 +16425,26 @@
     .prologue
     const/4 v4, 0x1
 
-    .line 2316
+    .line 2344
     new-instance v0, Lcom/android/internal/os/TosPlugMethod$MethodPlugParam;
 
     invoke-direct {v0}, Lcom/android/internal/os/TosPlugMethod$MethodPlugParam;-><init>()V
 
-    .line 2317
+    .line 2345
     .local v0, "param":Lcom/android/internal/os/TosPlugMethod$MethodPlugParam;
     iput v4, v0, Lcom/android/internal/os/TosPlugMethod$MethodPlugParam;->invokeType:I
 
-    .line 2318
+    .line 2346
     iput-object p0, v0, Lcom/android/internal/os/TosPlugMethod$MethodPlugParam;->thisObject:Ljava/lang/Object;
 
-    .line 2319
+    .line 2347
     const/4 v1, 0x2
 
     new-array v1, v1, [Ljava/lang/Object;
 
     iput-object v1, v0, Lcom/android/internal/os/TosPlugMethod$MethodPlugParam;->args:[Ljava/lang/Object;
 
-    .line 2320
+    .line 2348
     iget-object v1, v0, Lcom/android/internal/os/TosPlugMethod$MethodPlugParam;->args:[Ljava/lang/Object;
 
     const/4 v2, 0x0
@@ -16454,22 +16455,22 @@
 
     aput-object v3, v1, v2
 
-    .line 2321
+    .line 2349
     iget-object v1, v0, Lcom/android/internal/os/TosPlugMethod$MethodPlugParam;->args:[Ljava/lang/Object;
 
     iget-object v2, p0, Landroid/view/ViewRootImpl;->mContext:Landroid/content/Context;
 
     aput-object v2, v1, v4
 
-    .line 2322
+    .line 2350
     const-string v1, "android.view.ViewRootImpl#draw"
 
     invoke-static {v1, v0}, Lcom/android/internal/os/TosModulesLoader;->invoke(Ljava/lang/String;Lcom/android/internal/os/TosPlugMethod$MethodPlugParam;)V
 
-    .line 2323
+    .line 2351
     invoke-direct {p0, p1}, Landroid/view/ViewRootImpl;->tos_org_draw(Z)V
 
-    .line 2324
+    .line 2352
     return-void
 .end method
 
@@ -16482,31 +16483,31 @@
     .end annotation
 
     .prologue
-    .line 2260
+    .line 2288
     invoke-direct {p0}, Landroid/view/ViewRootImpl;->tos_org_performDraw()V
 
-    .line 2261
+    .line 2289
     new-instance v0, Lcom/android/internal/os/TosPlugMethod$MethodPlugParam;
 
     invoke-direct {v0}, Lcom/android/internal/os/TosPlugMethod$MethodPlugParam;-><init>()V
 
-    .line 2262
+    .line 2290
     .local v0, "param":Lcom/android/internal/os/TosPlugMethod$MethodPlugParam;
     const/4 v1, 0x2
 
     iput v1, v0, Lcom/android/internal/os/TosPlugMethod$MethodPlugParam;->invokeType:I
 
-    .line 2263
+    .line 2291
     iput-object p0, v0, Lcom/android/internal/os/TosPlugMethod$MethodPlugParam;->thisObject:Ljava/lang/Object;
 
-    .line 2264
+    .line 2292
     const/4 v1, 0x1
 
     new-array v1, v1, [Ljava/lang/Object;
 
     iput-object v1, v0, Lcom/android/internal/os/TosPlugMethod$MethodPlugParam;->args:[Ljava/lang/Object;
 
-    .line 2265
+    .line 2293
     iget-object v1, v0, Lcom/android/internal/os/TosPlugMethod$MethodPlugParam;->args:[Ljava/lang/Object;
 
     const/4 v2, 0x0
@@ -16515,12 +16516,12 @@
 
     aput-object v3, v1, v2
 
-    .line 2266
+    .line 2294
     const-string v1, "android.view.ViewRootImpl#performDraw"
 
     invoke-static {v1, v0}, Lcom/android/internal/os/TosModulesLoader;->invoke(Ljava/lang/String;Lcom/android/internal/os/TosPlugMethod$MethodPlugParam;)V
 
-    .line 2267
+    .line 2295
     return-void
 .end method
 
@@ -16535,24 +16536,24 @@
     .prologue
     const/4 v1, 0x1
 
-    .line 5925
+    .line 5953
     new-instance v0, Lcom/android/internal/os/TosPlugMethod$MethodPlugParam;
 
     invoke-direct {v0}, Lcom/android/internal/os/TosPlugMethod$MethodPlugParam;-><init>()V
 
-    .line 5926
+    .line 5954
     .local v0, "param":Lcom/android/internal/os/TosPlugMethod$MethodPlugParam;
     iput v1, v0, Lcom/android/internal/os/TosPlugMethod$MethodPlugParam;->invokeType:I
 
-    .line 5927
+    .line 5955
     iput-object p0, v0, Lcom/android/internal/os/TosPlugMethod$MethodPlugParam;->thisObject:Ljava/lang/Object;
 
-    .line 5928
+    .line 5956
     new-array v1, v1, [Ljava/lang/Object;
 
     iput-object v1, v0, Lcom/android/internal/os/TosPlugMethod$MethodPlugParam;->args:[Ljava/lang/Object;
 
-    .line 5929
+    .line 5957
     iget-object v1, v0, Lcom/android/internal/os/TosPlugMethod$MethodPlugParam;->args:[Ljava/lang/Object;
 
     const/4 v2, 0x0
@@ -16561,15 +16562,15 @@
 
     aput-object v3, v1, v2
 
-    .line 5930
+    .line 5958
     const-string v1, "android.view.ViewRootImpl#dispatchDoneAnimating"
 
     invoke-static {v1, v0}, Lcom/android/internal/os/TosModulesLoader;->invoke(Ljava/lang/String;Lcom/android/internal/os/TosPlugMethod$MethodPlugParam;)V
 
-    .line 5931
+    .line 5959
     invoke-virtual {p0}, Landroid/view/ViewRootImpl;->tos_org_dispatchDoneAnimating()V
 
-    .line 5932
+    .line 5960
     return-void
 .end method
 
@@ -16584,24 +16585,24 @@
     .prologue
     const/4 v1, 0x1
 
-    .line 5329
+    .line 5357
     new-instance v0, Lcom/android/internal/os/TosPlugMethod$MethodPlugParam;
 
     invoke-direct {v0}, Lcom/android/internal/os/TosPlugMethod$MethodPlugParam;-><init>()V
 
-    .line 5330
+    .line 5358
     .local v0, "param":Lcom/android/internal/os/TosPlugMethod$MethodPlugParam;
     iput v1, v0, Lcom/android/internal/os/TosPlugMethod$MethodPlugParam;->invokeType:I
 
-    .line 5331
+    .line 5359
     iput-object p0, v0, Lcom/android/internal/os/TosPlugMethod$MethodPlugParam;->thisObject:Ljava/lang/Object;
 
-    .line 5332
+    .line 5360
     new-array v1, v1, [Ljava/lang/Object;
 
     iput-object v1, v0, Lcom/android/internal/os/TosPlugMethod$MethodPlugParam;->args:[Ljava/lang/Object;
 
-    .line 5333
+    .line 5361
     iget-object v1, v0, Lcom/android/internal/os/TosPlugMethod$MethodPlugParam;->args:[Ljava/lang/Object;
 
     const/4 v2, 0x0
@@ -16610,15 +16611,15 @@
 
     aput-object v3, v1, v2
 
-    .line 5334
+    .line 5362
     const-string v1, "android.view.ViewRootImpl#doDie"
 
     invoke-static {v1, v0}, Lcom/android/internal/os/TosModulesLoader;->invoke(Ljava/lang/String;Lcom/android/internal/os/TosPlugMethod$MethodPlugParam;)V
 
-    .line 5335
+    .line 5363
     invoke-virtual {p0}, Landroid/view/ViewRootImpl;->tos_org_doDie()V
 
-    .line 5336
+    .line 5364
     return-void
 .end method
 
@@ -16633,24 +16634,24 @@
     .prologue
     const/4 v1, 0x1
 
-    .line 5067
+    .line 5095
     new-instance v0, Lcom/android/internal/os/TosPlugMethod$MethodPlugParam;
 
     invoke-direct {v0}, Lcom/android/internal/os/TosPlugMethod$MethodPlugParam;-><init>()V
 
-    .line 5068
+    .line 5096
     .local v0, "param":Lcom/android/internal/os/TosPlugMethod$MethodPlugParam;
     iput v1, v0, Lcom/android/internal/os/TosPlugMethod$MethodPlugParam;->invokeType:I
 
-    .line 5069
+    .line 5097
     iput-object p0, v0, Lcom/android/internal/os/TosPlugMethod$MethodPlugParam;->thisObject:Ljava/lang/Object;
 
-    .line 5070
+    .line 5098
     new-array v1, v1, [Ljava/lang/Object;
 
     iput-object v1, v0, Lcom/android/internal/os/TosPlugMethod$MethodPlugParam;->args:[Ljava/lang/Object;
 
-    .line 5071
+    .line 5099
     iget-object v1, v0, Lcom/android/internal/os/TosPlugMethod$MethodPlugParam;->args:[Ljava/lang/Object;
 
     const/4 v2, 0x0
@@ -16659,15 +16660,15 @@
 
     aput-object v3, v1, v2
 
-    .line 5072
+    .line 5100
     const-string v1, "android.view.ViewRootImpl#handleDispatchDoneAnimating"
 
     invoke-static {v1, v0}, Lcom/android/internal/os/TosModulesLoader;->invoke(Ljava/lang/String;Lcom/android/internal/os/TosPlugMethod$MethodPlugParam;)V
 
-    .line 5073
+    .line 5101
     invoke-virtual {p0}, Landroid/view/ViewRootImpl;->tos_org_handleDispatchDoneAnimating()V
 
-    .line 5074
+    .line 5102
     return-void
 .end method
 
@@ -16684,34 +16685,34 @@
     .prologue
     const/4 v1, 0x2
 
-    .line 858
+    .line 886
     invoke-virtual {p0, p1, p2}, Landroid/view/ViewRootImpl;->tos_org_invalidateChildInParent([ILandroid/graphics/Rect;)Landroid/view/ViewParent;
 
-    .line 859
+    .line 887
     new-instance v0, Lcom/android/internal/os/TosPlugMethod$MethodPlugParam;
 
     invoke-direct {v0}, Lcom/android/internal/os/TosPlugMethod$MethodPlugParam;-><init>()V
 
-    .line 860
+    .line 888
     .local v0, "param":Lcom/android/internal/os/TosPlugMethod$MethodPlugParam;
     iput v1, v0, Lcom/android/internal/os/TosPlugMethod$MethodPlugParam;->invokeType:I
 
-    .line 861
+    .line 889
     iput-object p0, v0, Lcom/android/internal/os/TosPlugMethod$MethodPlugParam;->thisObject:Ljava/lang/Object;
 
-    .line 862
+    .line 890
     new-array v1, v1, [Ljava/lang/Object;
 
     iput-object v1, v0, Lcom/android/internal/os/TosPlugMethod$MethodPlugParam;->args:[Ljava/lang/Object;
 
-    .line 863
+    .line 891
     iget-object v1, v0, Lcom/android/internal/os/TosPlugMethod$MethodPlugParam;->args:[Ljava/lang/Object;
 
     const/4 v2, 0x0
 
     aput-object p2, v1, v2
 
-    .line 864
+    .line 892
     iget-object v1, v0, Lcom/android/internal/os/TosPlugMethod$MethodPlugParam;->args:[Ljava/lang/Object;
 
     const/4 v2, 0x1
@@ -16720,13 +16721,119 @@
 
     aput-object v3, v1, v2
 
-    .line 865
+    .line 893
     const-string v1, "android.view.ViewRootImpl#invalidateChildInParent"
 
     invoke-static {v1, v0}, Lcom/android/internal/os/TosModulesLoader;->invoke(Ljava/lang/String;Lcom/android/internal/os/TosPlugMethod$MethodPlugParam;)V
 
-    .line 866
+    .line 894
     const/4 v1, 0x0
 
     return-object v1
+.end method
+
+.method public setView(Landroid/view/View;Landroid/view/WindowManager$LayoutParams;Landroid/view/View;)V
+    .locals 4
+    .param p1, "view"    # Landroid/view/View;
+    .param p2, "attrs"    # Landroid/view/WindowManager$LayoutParams;
+    .param p3, "panelParentView"    # Landroid/view/View;
+    .annotation build Landroid/annotation/TOSHook;
+        hooktype = .enum Landroid/annotation/TOSHook$TOSHookType;->CHANGE_METHOD:Landroid/annotation/TOSHook$TOSHookType;
+        note = "SetupFlashRom: systemui part ::terryfgao::20151206"
+        romtype = .enum Landroid/annotation/TOSHook$TOSRomType;->ROM:Landroid/annotation/TOSHook$TOSRomType;
+    .end annotation
+
+    .prologue
+    const/4 v1, 0x2
+
+    .line 441
+    invoke-virtual {p0, p1, p2, p3}, Landroid/view/ViewRootImpl;->tos_org_setView(Landroid/view/View;Landroid/view/WindowManager$LayoutParams;Landroid/view/View;)V
+
+    .line 442
+    new-instance v0, Lcom/android/internal/os/TosPlugMethod$MethodPlugParam;
+
+    invoke-direct {v0}, Lcom/android/internal/os/TosPlugMethod$MethodPlugParam;-><init>()V
+
+    .line 443
+    .local v0, "param":Lcom/android/internal/os/TosPlugMethod$MethodPlugParam;
+    iput v1, v0, Lcom/android/internal/os/TosPlugMethod$MethodPlugParam;->invokeType:I
+
+    .line 444
+    iput-object p0, v0, Lcom/android/internal/os/TosPlugMethod$MethodPlugParam;->thisObject:Ljava/lang/Object;
+
+    .line 445
+    new-array v1, v1, [Ljava/lang/Object;
+
+    iput-object v1, v0, Lcom/android/internal/os/TosPlugMethod$MethodPlugParam;->args:[Ljava/lang/Object;
+
+    .line 446
+    iget-object v1, v0, Lcom/android/internal/os/TosPlugMethod$MethodPlugParam;->args:[Ljava/lang/Object;
+
+    const/4 v2, 0x0
+
+    aput-object p2, v1, v2
+
+    .line 447
+    iget-object v1, v0, Lcom/android/internal/os/TosPlugMethod$MethodPlugParam;->args:[Ljava/lang/Object;
+
+    const/4 v2, 0x1
+
+    iget-object v3, p0, Landroid/view/ViewRootImpl;->mContext:Landroid/content/Context;
+
+    aput-object v3, v1, v2
+
+    .line 448
+    const-string v1, "android.view.ViewRootImpl#setView"
+
+    invoke-static {v1, v0}, Lcom/android/internal/os/TosModulesLoader;->invoke(Ljava/lang/String;Lcom/android/internal/os/TosPlugMethod$MethodPlugParam;)V
+
+    .line 449
+    return-void
+.end method
+
+.method public tos_ViewRootImpl_init(Landroid/content/Context;)V
+    .locals 3
+    .param p1, "context"    # Landroid/content/Context;
+    .annotation build Landroid/annotation/TOSHook;
+        hooktype = .enum Landroid/annotation/TOSHook$TOSHookType;->CHANGE_METHOD:Landroid/annotation/TOSHook$TOSHookType;
+        note = "SetupFlashRom: systemui part ::terryfgao::20151206"
+        romtype = .enum Landroid/annotation/TOSHook$TOSRomType;->ROM:Landroid/annotation/TOSHook$TOSRomType;
+    .end annotation
+
+    .prologue
+    .line 342
+    new-instance v0, Lcom/android/internal/os/TosPlugMethod$MethodPlugParam;
+
+    invoke-direct {v0}, Lcom/android/internal/os/TosPlugMethod$MethodPlugParam;-><init>()V
+
+    .line 343
+    .local v0, "param":Lcom/android/internal/os/TosPlugMethod$MethodPlugParam;
+    const/4 v1, 0x2
+
+    iput v1, v0, Lcom/android/internal/os/TosPlugMethod$MethodPlugParam;->invokeType:I
+
+    .line 344
+    iput-object p0, v0, Lcom/android/internal/os/TosPlugMethod$MethodPlugParam;->thisObject:Ljava/lang/Object;
+
+    .line 345
+    const/4 v1, 0x1
+
+    new-array v1, v1, [Ljava/lang/Object;
+
+    iput-object v1, v0, Lcom/android/internal/os/TosPlugMethod$MethodPlugParam;->args:[Ljava/lang/Object;
+
+    .line 346
+    iget-object v1, v0, Lcom/android/internal/os/TosPlugMethod$MethodPlugParam;->args:[Ljava/lang/Object;
+
+    const/4 v2, 0x0
+
+    aput-object p1, v1, v2
+
+    .line 347
+    const-string v1, "android.view.ViewRootImpl#ViewRootImpl"
+
+    invoke-static {v1, v0}, Lcom/android/internal/os/TosModulesLoader;->invoke(Ljava/lang/String;Lcom/android/internal/os/TosPlugMethod$MethodPlugParam;)V
+
+    .line 348
+    return-void
 .end method
