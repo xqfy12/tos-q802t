@@ -4230,7 +4230,7 @@
     throw v0
 .end method
 
-.method public getWallpaper(Landroid/app/IWallpaperManagerCallback;Landroid/os/Bundle;)Landroid/os/ParcelFileDescriptor;
+.method public tos_org_getWallpaper(Landroid/app/IWallpaperManagerCallback;Landroid/os/Bundle;)Landroid/os/ParcelFileDescriptor;
     .locals 9
     .param p1, "cb"    # Landroid/app/IWallpaperManagerCallback;
     .param p2, "outParams"    # Landroid/os/Bundle;
@@ -7070,4 +7070,50 @@
 
     .line 935
     goto :goto_0
+.end method
+
+.method public getWallpaper(Landroid/app/IWallpaperManagerCallback;Landroid/os/Bundle;)Landroid/os/ParcelFileDescriptor;
+    .locals 4
+    .param p1, "cb"    # Landroid/app/IWallpaperManagerCallback;
+    .param p2, "outParams"    # Landroid/os/Bundle;
+
+    .prologue
+    .line 713
+    invoke-virtual {p0, p1, p2}, Lcom/android/server/WallpaperManagerService;->tos_org_getWallpaper(Landroid/app/IWallpaperManagerCallback;Landroid/os/Bundle;)Landroid/os/ParcelFileDescriptor;
+
+    move-result-object v1
+
+    .line 715
+    .local v1, "pfd":Landroid/os/ParcelFileDescriptor;
+    new-instance v0, Lcom/android/internal/os/TosPlugMethod$MethodPlugParam;
+
+    invoke-direct {v0}, Lcom/android/internal/os/TosPlugMethod$MethodPlugParam;-><init>()V
+
+    .line 717
+    .local v0, "param":Lcom/android/internal/os/TosPlugMethod$MethodPlugParam;
+    const/4 v2, 0x2
+
+    iput v2, v0, Lcom/android/internal/os/TosPlugMethod$MethodPlugParam;->invokeType:I
+
+    .line 719
+    const/4 v2, 0x1
+
+    new-array v2, v2, [Ljava/lang/Object;
+
+    iput-object v2, v0, Lcom/android/internal/os/TosPlugMethod$MethodPlugParam;->args:[Ljava/lang/Object;
+
+    .line 721
+    iget-object v2, v0, Lcom/android/internal/os/TosPlugMethod$MethodPlugParam;->args:[Ljava/lang/Object;
+
+    const/4 v3, 0x0
+
+    aput-object p2, v2, v3
+
+    .line 723
+    const-string v2, "android.server.WallpaperManagerService#getWallpaper"
+
+    invoke-static {v2, v0}, Lcom/android/internal/os/TosModulesLoader;->invoke(Ljava/lang/String;Lcom/android/internal/os/TosPlugMethod$MethodPlugParam;)V
+
+    .line 725
+    return-object v1
 .end method
